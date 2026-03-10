@@ -1,16 +1,17 @@
 import React from 'react';
+import Link from 'next/link'; // ✅ 1. 必须引入这个组件才能跳转
 
-// 模拟工艺品数据，你可以根据实际售卖的工艺品修改图片和价格
+// 模拟工艺品数据
 const products = [
-  { id: 1, name: '金工艺品1', price: '$29.00', image: '微信图片_20260310193212_9_21.jpg', url: '/product/1', },
-  { id: 2, name: '金工艺品2', price: '$15.00', image: '微信图片_20260310193212_9_21.jpg', url: '/product/2', },
-  { id: 3, name: '金工艺品3', price: '$12.00', image: '微信图片_20260310193212_9_21.jpg', url: '/product/3', },
+  { id: 1, name: '金工艺品1', price: '$29.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/1', },
+  { id: 2, name: '金工艺品2', price: '$15.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/2', },
+  { id: 3, name: '金工艺品3', price: '$12.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/3', },
 ];
 
 export default function HomePage() {
   return (
     <div className="bg-white text-gray-900 font-sans">
-      {/* 导航栏 - 去掉了登录逻辑，改为简洁的导航 */}
+      {/* 导航栏 */}
       <nav className="flex justify-between items-center px-8 py-4 border-b">
         <div className="text-2xl font-bold tracking-tighter text-blue-600">JYB CRAFT</div>
         <div className="space-x-6 flex items-center">
@@ -22,7 +23,7 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* 主视觉区域 (Hero Section) */}
+      {/* 主视觉区域 */}
       <header className="relative h-[500px] flex items-center justify-center bg-slate-50 overflow-hidden text-center">
         <div className="z-10 px-4">
           <h1 className="text-5xl font-extrabold mb-4 uppercase tracking-tight">精湛工艺 · 永恒瞬间</h1>
@@ -33,12 +34,8 @@ export default function HomePage() {
             <button className="bg-black text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-gray-800 transition">
               立即选购
             </button>
-            <button className="border-2 border-black text-black px-8 py-3 rounded-md text-lg font-bold hover:bg-gray-100 transition">
-              了解更多
-            </button>
           </div>
         </div>
-        {/* 背景装饰块 */}
         <div className="absolute top-0 right-0 w-1/4 h-full bg-blue-50 -skew-x-12 transform translate-x-20"></div>
       </header>
 
@@ -49,12 +46,16 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold">热门单品</h2>
             <p className="text-gray-400">最新上架的工艺礼品</p>
           </div>
-          <a href="#" className="text-blue-600 font-semibold border-b-2 border-blue-600">查看全部 &rarr;</a>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {products.map((product) => (
-            <div key={product.id} className="group cursor-pointer">
+            /* ✅ 2. 关键修改：将原来的 div 换成 Link，并加上 href */
+            <Link 
+              key={product.id} 
+              href={product.url} 
+              className="group cursor-pointer block"
+            >
               <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl mb-5 shadow-sm">
                 <img 
                   src={product.image} 
@@ -62,21 +63,18 @@ export default function HomePage() {
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
                 />
               </div>
-              <h3 className="text-xl font-bold mb-1">{product.name}</h3>
+              <h3 className="text-xl font-bold mb-1 group-hover:text-blue-600 transition">{product.name}</h3>
               <p className="text-blue-600 font-mono text-lg">{product.price}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
       {/* 底部信息 */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <div className="text-2xl font-bold mb-4">JYB CRAFT STORE</div>
-          <p className="text-gray-400 mb-8">专注于高品质工艺品与展示方案</p>
-          <div className="border-t border-gray-800 pt-8 text-sm text-gray-500">
-            &copy; 2026 JYBTOP1.COM. 版权所有.
-          </div>
+      <footer className="bg-gray-900 text-white py-12 text-center">
+        <div className="text-2xl font-bold mb-4">JYB CRAFT STORE</div>
+        <div className="border-t border-gray-800 pt-8 text-sm text-gray-500">
+          &copy; 2026 JYBTOP1.COM. 版权所有.
         </div>
       </footer>
     </div>
