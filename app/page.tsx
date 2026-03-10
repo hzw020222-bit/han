@@ -1,65 +1,84 @@
-import Image from "next/image";
+import React from 'react';
 
-export default function Home() {
+// 模拟工艺品数据，你可以根据实际售卖的工艺品修改图片和价格
+const products = [
+  { id: 1, name: '精工纪念奖牌', price: '$29.00', image: 'https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?w=400' },
+  { id: 2, name: '高清亚克力展示盒', price: '$15.00', image: 'https://images.unsplash.com/photo-1590073844006-36939763e80c?w=400' },
+  { id: 3, name: '定制收藏底座', price: '$12.00', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400' },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="bg-white text-gray-900 font-sans">
+      {/* 导航栏 - 去掉了登录逻辑，改为简洁的导航 */}
+      <nav className="flex justify-between items-center px-8 py-4 border-b">
+        <div className="text-2xl font-bold tracking-tighter text-blue-600">JYB CRAFT</div>
+        <div className="space-x-6 flex items-center">
+          <a href="#" className="text-sm font-medium hover:text-blue-600">所有商品</a>
+          <a href="#" className="text-sm font-medium hover:text-blue-600">关于我们</a>
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition">
+            联系客服
+          </button>
+        </div>
+      </nav>
+
+      {/* 主视觉区域 (Hero Section) */}
+      <header className="relative h-[500px] flex items-center justify-center bg-slate-50 overflow-hidden text-center">
+        <div className="z-10 px-4">
+          <h1 className="text-5xl font-extrabold mb-4 uppercase tracking-tight">精湛工艺 · 永恒瞬间</h1>
+          <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
+            为您心爱的收藏提供专业级展示空间，让每一份回忆都闪耀光芒。
           </p>
+          <div className="flex justify-center gap-4">
+            <button className="bg-black text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-gray-800 transition">
+              立即选购
+            </button>
+            <button className="border-2 border-black text-black px-8 py-3 rounded-md text-lg font-bold hover:bg-gray-100 transition">
+              了解更多
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {/* 背景装饰块 */}
+        <div className="absolute top-0 right-0 w-1/4 h-full bg-blue-50 -skew-x-12 transform translate-x-20"></div>
+      </header>
+
+      {/* 产品展示区 */}
+      <section className="max-w-6xl mx-auto py-20 px-4">
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-3xl font-bold">热门单品</h2>
+            <p className="text-gray-400">最新上架的工艺礼品</p>
+          </div>
+          <a href="#" className="text-blue-600 font-semibold border-b-2 border-blue-600">查看全部 &rarr;</a>
         </div>
-      </main>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {products.map((product) => (
+            <div key={product.id} className="group cursor-pointer">
+              <div className="aspect-square bg-gray-100 overflow-hidden rounded-xl mb-5 shadow-sm">
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500" 
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-1">{product.name}</h3>
+              <p className="text-blue-600 font-mono text-lg">{product.price}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 底部信息 */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="text-2xl font-bold mb-4">JYB CRAFT STORE</div>
+          <p className="text-gray-400 mb-8">专注于高品质工艺品与展示方案</p>
+          <div className="border-t border-gray-800 pt-8 text-sm text-gray-500">
+            &copy; 2026 JYBTOP1.COM. 版权所有.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
