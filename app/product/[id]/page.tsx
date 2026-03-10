@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 // 这里假设你把数据放在了同一个文件或者导入进来
-import { productsData } from '../../data'; 
+import { productsData } from '../data'; 
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   // 核心逻辑：从数据表里找到那个 ID 一致的商品
