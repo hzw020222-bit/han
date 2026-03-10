@@ -2,9 +2,9 @@ import React from 'react';
 
 // 模拟工艺品数据，你可以根据实际售卖的工艺品修改图片和价格
 const products = [
-  { id: 1, name: '金工艺品1', price: '$29.00', image: 'public/微信图片_20260310193212_9_21.jpg' },
-  { id: 2, name: '金工艺品2', price: '$15.00', image: 'public/微信图片_20260310193212_9_21.jpg' },
-  { id: 3, name: '金工艺品3', price: '$12.00', image: 'public/微信图片_20260310193212_9_21.jpg' },
+  { id: 1, name: '金工艺品1', price: '$29.00', image: '微信图片_20260310193212_9_21.jpg' },
+  { id: 2, name: '金工艺品2', price: '$15.00', image: '微信图片_20260310193212_9_21.jpg' },
+  { id: 3, name: '金工艺品3', price: '$12.00', image: '微信图片_20260310193212_9_21.jpg' },
 ];
 
 export default function HomePage() {
