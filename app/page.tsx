@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-// 1. 你的产品数据（保持之前成功的配置）
+// 1. 商品数据
 const products = [
   { id: "1", name: '金工艺品1', price: '$29.00', image: '/微信图片_20260310193212_9_21.jpg', url: '/product/1' },
   { id: "2", name: '金工艺品2', price: '$15.00', image: '/微信图片_20260310193212_9_21.jpg', url: '/product/2' },
@@ -11,7 +11,7 @@ const products = [
 ];
 
 export default function HomePage() {
-  // 2. 轮播图数组（在这里增加或修改图片路径）
+  // 2. 轮播图数组（如果图片没上传，这里会显示空白，建议先上传 factory1.jpg 等）
   const carouselImages = [
     "/微信图片_20260310193212_9_21.jpg", 
     "/factory1.jpg", 
@@ -21,7 +21,6 @@ export default function HomePage() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 3. 自动轮播逻辑
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
@@ -42,15 +41,7 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero 区域 */}
-      <header className="relative h-[400px] flex items-center justify-center bg-slate-50 text-center">
-        <div className="z-10 px-4">
-          <h1 className="text-5xl font-extrabold mb-4 uppercase">精湛工艺 · 永恒瞬间</h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">JYB CRAFT 工厂直供，为您提供专业级工艺礼品。</p>
-        </div>
-      </header>
-
-      {/* 🌟 公司简介与多图轮播板块 */}
+      {/* 🌟 调整位置后的【工厂简介】（现在在最上面） */}
       <section className="bg-slate-900 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* 左侧：文字 */}
@@ -77,7 +68,6 @@ export default function HomePage() {
                   alt="Factory Slide"
                 />
               ))}
-              {/* 小圆点指示器 */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {carouselImages.map((_, index) => (
                   <div key={index} className={`h-1.5 w-1.5 rounded-full ${index === currentIndex ? 'bg-blue-600 w-4' : 'bg-white/50'}`} />
@@ -87,6 +77,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 🌟 调整位置后的【Hero Slogan】（现在在简介下面） */}
+      <header className="relative h-[300px] flex items-center justify-center bg-slate-50 text-center border-b">
+        <div className="z-10 px-4">
+          <h1 className="text-5xl font-extrabold mb-4 uppercase">精湛工艺 · 永恒瞬间</h1>
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto">JYB CRAFT 工厂直供，为您提供专业级工艺礼品。</p>
+        </div>
+      </header>
 
       {/* 产品展示区 */}
       <section className="max-w-6xl mx-auto py-20 px-4">
