@@ -14,9 +14,9 @@ export default function HomePage() {
   // 2. 轮播图数组（如果图片没上传，这里会显示空白，建议先上传 factory1.jpg 等）
   const carouselImages = [
     "/微信图片_20260310193212_9_21.jpg", 
-    "/factory1.jpg", 
-    "/factory2.jpg",
-    "/factory3.jpg"
+    "/微信图片_20260310193212_9_21.jpg", 
+    "/微信图片_20260310193212_9_21.jpg",
+    "/微信图片_20260310193212_9_21.jpg"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
