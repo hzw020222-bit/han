@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-// 1. 直接把数据放在这里，不用 import，排除路径错误
+// 1. 商品数据
 const productsData = [
   { 
     id: "1", 
@@ -26,15 +26,21 @@ const productsData = [
   }
 ];
 
-export default function ProductDetail({ params }: { params: { id: string } }) {
-  // 2. 这里的 params.id 会自动拿到 URL 里的数字
-  const product = productsData.find(p => p.id === params.id);
+// ✅ 新增这个函数：告诉网站这三个 ID 是真实存在的，提前准备好页面
+export async function generateStaticParams() {
+  return productsData.map((product) => ({
+    id: product.id,
+  }));
+}
 
-  // 3. 容错处理
+export default function ProductDetail({ params }: { params: { id: string } }) {
+  // ✅ 修改这里：使用 String() 强制转换，确保匹配成功
+  const product = productsData.find(p => String(p.id) === String(params.id));
+
   if (!product) {
     return (
       <div className="py-20 text-center">
-        <h2 className="text-xl mb-4">抱歉，未找到该商品</h2>
+        <h2 className="text-xl mb-4">抱歉，未找到该商品 (ID: {params.id})</h2>
         <Link href="/" className="text-blue-600">返回首页</Link>
       </div>
     );
