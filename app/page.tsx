@@ -8,21 +8,21 @@ const products = [
     name: '金工艺品1', 
     price: '$29.00', 
     // 👈 确保这个文件名和 GitHub 文件夹里的一模一样
-    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    image: '/微信图片_20260310193212_9_21.jpg', 
     url: '/product/1' 
   },
   { 
     id: "2", 
     name: '金工艺品2', 
     price: '$15.00', 
-    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    image: '/微信图片_20260310193212_9_21.jpg', 
     url: '/product/2' 
   },
   { 
     id: "3", 
     name: '金工艺品3', 
     price: '$12.00', 
-    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    image: '/微信图片_20260310193212_9_21.jpg', 
     url: '/product/3' 
   },
 ];
