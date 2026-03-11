@@ -3,9 +3,28 @@ import Link from 'next/link'; // ✅ 1. 必须引入这个组件才能跳转
 
 // 模拟工艺品数据
 const products = [
-  { id: 1, name: '金工艺品1', price: '$29.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/1', },
-  { id: 2, name: '金工艺品2', price: '$15.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/2', },
-  { id: 3, name: '金工艺品3', price: '$12.00', image: '/photo/微信图片_20260310193212_9_21.jpg', url: '/product/3', },
+  { 
+    id: "1", // 👈 加引号，变成字符串
+    name: '金工艺品1', 
+    price: '$29.00', 
+    // 👈 确保这个文件名和 GitHub 文件夹里的一模一样
+    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    url: '/product/1' 
+  },
+  { 
+    id: "2", 
+    name: '金工艺品2', 
+    price: '$15.00', 
+    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    url: '/product/2' 
+  },
+  { 
+    id: "3", 
+    name: '金工艺品3', 
+    price: '$12.00', 
+    image: '/photo/微信图片_20260310193212_9_21.jpg', 
+    url: '/product/3' 
+  },
 ];
 
 export default function HomePage() {
