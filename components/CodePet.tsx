@@ -8,7 +8,7 @@ const STAGES = [
     color: "#ffb3c6",
     glow: "#ff6b9d",
     description: "A mysterious egg...",
-    draw: (ctx, t) => {
+    draw: (ctx: CanvasRenderingContext2D, t: number) => {
       // Egg body
       ctx.fillStyle = "#fff0f5";
       ctx.beginPath();
@@ -37,7 +37,7 @@ const STAGES = [
     color: "#ffd6a5",
     glow: "#ffaa33",
     description: "It hatched! So tiny!",
-    draw: (ctx, t) => {
+    draw: (ctx: CanvasRenderingContext2D, t: number) => {
       const bob = Math.sin(t * 0.04) * 3;
       // Body
       ctx.fillStyle = "#fff3cd";
@@ -79,7 +79,7 @@ const STAGES = [
     color: "#b5ead7",
     glow: "#2ec4b6",
     description: "Learning to code!",
-    draw: (ctx, t) => {
+    draw: (ctx: CanvasRenderingContext2D, t: number) => {
       const bob = Math.sin(t * 0.04) * 2;
       // Body
       ctx.fillStyle = "#c8f0e0";
@@ -127,7 +127,7 @@ const STAGES = [
     color: "#a0c4ff",
     glow: "#4361ee",
     description: "Shipping features daily!",
-    draw: (ctx, t) => {
+    draw: (ctx: CanvasRenderingContext2D, t: number) => {
       const bob = Math.sin(t * 0.04) * 2;
       const earWiggle = Math.sin(t * 0.08) * 1.5;
       // Cape/hoodie body
@@ -178,7 +178,7 @@ const STAGES = [
     color: "#ffd6ff",
     glow: "#c77dff",
     description: "Legendary 10x developer!",
-    draw: (ctx, t) => {
+    draw: (ctx: CanvasRenderingContext2D, t: number) => {
       const bob = Math.sin(t * 0.04) * 2;
       const glow = (Math.sin(t * 0.05) + 1) / 2;
       // Magical aura
