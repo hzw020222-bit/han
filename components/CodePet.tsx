@@ -260,6 +260,38 @@ function PetCanvas({ stage, t }: { stage: any; t: number }) {
   }, [stage]);
 
   return (
+    export function CodePet() {
+  // --- 在这里插入拖拽逻辑 ---
+  const [position, setPosition] = useState({ x: 50, y: 50 }); // 初始位置
+  const [isDragging, setIsDragging] = useState(false);
+  const [rel, setRel] = useState({ x: 0, y: 0 });
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    if (e.button !== 0) return;
+    setIsDragging(true);
+    const box = e.currentTarget.getBoundingClientRect();
+    setRel({ x: e.pageX - box.left, y: e.pageY - box.top });
+    e.stopPropagation();
+  };
+
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      setPosition({ x: e.pageX - rel.x, y: e.pageY - rel.y });
+    };
+    const onMouseUp = () => setIsDragging(false);
+    if (isDragging) {
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+    }
+    return () => {
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    };
+  }, [isDragging, rel]);
+  // -----------------------
+
+  // 下面是你原本的 streak, hours, xp 等逻辑...
     <canvas
       ref={canvasRef}
       width={120}
