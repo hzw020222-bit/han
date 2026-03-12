@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { CodePet } from "@/components/CodePet";
 
 export default function HomePage() {
   // 1. 定制案例（这里展示你们最拿手的工艺品类别）
@@ -163,6 +164,7 @@ export default function HomePage() {
         <p className="mb-4">Global Shipping | Quality Guarantee | Custom Artistry</p>
         <p>&copy; 2026 JYB CRAFT ARTISTRY. All Rights Reserved.</p>
       </footer>
+      <CodePet />
     </div>
   );
 }
