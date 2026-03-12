@@ -120,54 +120,40 @@ const STAGES = [
       ctx.beginPath(); ctx.moveTo(86, 80 + bob); ctx.quadraticCurveTo(100, 65 + bob, 90, 50 + bob); ctx.stroke();
     },
   },
-  {
-    name: "Dev Cat",
-    minXP: 380,
-    emoji: "😸",
-    color: "#a0c4ff",
-    glow: "#4361ee",
-    description: "Shipping features daily!",
-    draw: (ctx: CanvasRenderingContext2D, t: number) => {
-      const bob = Math.sin(t * 0.04) * 2;
-      const earWiggle = Math.sin(t * 0.08) * 1.5;
-      // Cape/hoodie body
-      ctx.fillStyle = "#5b8dee";
-      ctx.beginPath(); ctx.ellipse(60, 80 + bob, 30, 28, 0, 0, Math.PI * 2); ctx.fill();
-      // Head
-      ctx.fillStyle = "#bde0fe";
-      ctx.beginPath(); ctx.arc(60, 50 + bob, 24, 0, Math.PI * 2); ctx.fill();
-      // Ears
-      ctx.fillStyle = "#bde0fe";
-      ctx.beginPath(); ctx.moveTo(40, 33 + bob + earWiggle); ctx.lineTo(33, 17 + bob); ctx.lineTo(53, 28 + bob); ctx.closePath(); ctx.fill();
-      ctx.beginPath(); ctx.moveTo(80, 33 + bob - earWiggle); ctx.lineTo(87, 17 + bob); ctx.lineTo(67, 28 + bob); ctx.closePath(); ctx.fill();
-      ctx.fillStyle = "#ffb3c6";
-      ctx.beginPath(); ctx.moveTo(41, 31 + bob + earWiggle); ctx.lineTo(35, 20 + bob); ctx.lineTo(52, 29 + bob); ctx.closePath(); ctx.fill();
-      ctx.beginPath(); ctx.moveTo(79, 31 + bob - earWiggle); ctx.lineTo(85, 20 + bob); ctx.lineTo(68, 29 + bob); ctx.closePath(); ctx.fill();
-      // Cheeks
-      ctx.fillStyle = "#ffb3c6"; ctx.globalAlpha = 0.6;
-      ctx.beginPath(); ctx.ellipse(44, 55 + bob, 9, 7, 0, 0, Math.PI * 2); ctx.fill();
-      ctx.beginPath(); ctx.ellipse(76, 55 + bob, 9, 7, 0, 0, Math.PI * 2); ctx.fill();
-      ctx.globalAlpha = 1;
-      // Eyes (stars / sparkle)
-      ctx.fillStyle = "#3d2b1f";
-      ctx.beginPath(); ctx.arc(51, 49 + bob, 6, 0, Math.PI * 2); ctx.fill();
-      ctx.beginPath(); ctx.arc(69, 49 + bob, 6, 0, Math.PI * 2); ctx.fill();
-      ctx.fillStyle = "#ffd700";
-      ctx.font = "bold 9px sans-serif";
-      ctx.fillText("★", 47, 53 + bob);
-      ctx.fillText("★", 65, 53 + bob);
-      // Glasses
-      ctx.strokeStyle = "#2d3142"; ctx.lineWidth = 1.5;
-      ctx.strokeRect(44, 44 + bob, 14, 11);
-      ctx.strokeRect(62, 44 + bob, 14, 11);
-      ctx.beginPath(); ctx.moveTo(58, 49 + bob); ctx.lineTo(62, 49 + bob); ctx.stroke();
-      // Hoodie pocket + code badge
-      ctx.fillStyle = "#4a7de8";
-      ctx.fillRect(48, 80, 24, 16);
-      ctx.fillStyle = "#0d1b2a"; ctx.font = "5px monospace";
-      ctx.fillStyle = "#a0c4ff"; ctx.fillText("{ }", 53, 91);
-      // Tail
-      ctx.strokeStyle = "#bde0fe"; ctx.lineWidth = 6;
+  // --- 第 123 行开始替换 ---
+function PetCanvas({ stage, t }: { stage: any; t: number }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    ctx.clearRect(0, 0, 120, 120);
+    stage.draw(ctx, t);
+  }, [stage, t]);
+
+  return (
+    <canvas 
+      ref={canvasRef} 
+      width={120} 
+      height={120} 
+      className="mx-auto" 
+      style={{ imageRendering: "pixelated" }} 
+    />
+  );
+}
+
+function StatSlider({ icon, label, value, setValue, max, xpPer, color, unit }: any) {
+  return (
+    <div className="mb-4">
+      <div className="flex justify-between items-center mb-1">
+        <span className="text-xs text-gray-400">{icon} {label}</span>
+        <span className="text-xs font-bold" style={{ color }}>
+          {value}{unit} <span className="text-[10px] opacity-50">= +{value * xpPer} XP</span>
+        </span>
+      </div>
+// --- 替换结束 ---
       ctx.beginPath(); ctx.moveTo(88, 85 + bob); ctx.quadraticCurveTo(105, 68 + bob, 92, 48 + bob); ctx.stroke();
     },
   },
