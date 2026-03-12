@@ -239,7 +239,21 @@ const STAGES = [
   },
 ];
 
-function PetCanvas({ stage, xp, tickRef }) {
+// 明确告诉组件 stage 和 t 的类型
+function PetCanvas({ stage, t }: { stage: any; t: number }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null); // 这里也加上类型
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return; // 增加防空检查
+    ctx.clearRect(0, 0, 120, 120);
+    stage.draw(ctx, t);
+  }, [stage, t]);
+
+  return <canvas ref={canvasRef} width={120} height={120} className="mx-auto" />;
+} {
   const canvasRef = useRef(null);
   const animRef = useRef(null);
 
