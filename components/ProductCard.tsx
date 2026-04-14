@@ -7,7 +7,7 @@ interface Product {
   title: string;
   price: number;
   unit: string;
-  image: string;
+  images: string[];     // ← 改成数组，支持多图
   stock: string;
 }
 
@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 h-full">
         <div className="relative h-64 bg-gray-100">
           <Image
-            src={product.image}
+            src={product.images[0]}          // ← 显示第一张
             alt={product.name}
             fill
             className="object-cover"
