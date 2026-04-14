@@ -26,7 +26,7 @@ export default function Home() {
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
       price: 5.5,
       unit: "个",
-      image: "/photo/产品首图/首图3.jpg",          // ← 改成包的实际图片文件名
+      image: "/photo/产品首图/首图3.jpeg",          // ← 改成包的实际图片文件名
       stock: "充足",
     },
     {
@@ -35,7 +35,7 @@ export default function Home() {
       title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
       price: 22.5,
       unit: "个",
-      image: "/photo/产品首图/首图4.jpg", // ← 改成表格里倒数第二个灯的图片
+      image: "/photo/产品首图/首图4.jpeg", // ← 改成表格里倒数第二个灯的图片
       stock: "充足",
     },
   ];
