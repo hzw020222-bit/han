@@ -67,7 +67,7 @@ export default function Home() {
       <header className="bg-gradient-to-br from-orange-600 to-amber-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="inline-block bg-white/20 text-white text-xs tracking-widest px-6 py-2 rounded-3xl mb-6">
-            原创设计 · 高品质礼物
+            原创设计 · 高品质
           </div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
             货盘产品展示站
