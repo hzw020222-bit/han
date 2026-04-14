@@ -77,14 +77,13 @@ export default function Home() {
              <br />
             仅供展示
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+                    <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link 
-          href="/products"
-          className="bg-white text-orange-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform inline-block"
+              href="/products"
+              className="bg-white text-orange-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform inline-block"
             >
-          浏览全部产品 ↓
+              浏览全部产品 ↓
             </Link>
-            </a>
           </div>
         </div>
       </header>
