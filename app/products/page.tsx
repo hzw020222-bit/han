@@ -122,10 +122,9 @@ export default function AllProducts() {
             <div className="w-9 h-9 bg-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">📦</div>
             <span className="text-2xl font-bold tracking-tight">货盘展示</span>
           </Link>
-          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <div className="hidden md:flex gap-8 text-sm font-medium">
             <Link href="/" className="hover:text-orange-600 transition-colors">首页</Link>
             <Link href="/products" className="text-orange-600 font-semibold">全部产品</Link>
-            <Link href="#" className="hover:text-orange-600 transition-colors">关于货盘</Link>
             <Link href="#" className="hover:text-orange-600 transition-colors">联系我们</Link>
           </div>
         </div>
