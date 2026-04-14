@@ -8,7 +8,7 @@ export default function Home() {
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
       price: 9.2,
       unit: "包（3个）",
-      image: "public/photo/产品首图/首图1.jpg",           // ← 改成你实际的特朗普币图片文件名
+      image: "/photo/产品首图/首图1.jpg",           // ← 改成你实际的特朗普币图片文件名
       stock: "充足",
     },
     {
@@ -17,7 +17,7 @@ export default function Home() {
       title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
       price: 23.4,
       unit: "个",
-      image: "public/photo/产品首图/首图2.jpg",   // ← 改成实际文件名（public/photo/ 里的）
+      image: "/photo/产品首图/首图2.jpg",   // ← 改成实际文件名（public/photo/ 里的）
       stock: "充足",
     },
     {
@@ -26,7 +26,7 @@ export default function Home() {
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
       price: 5.5,
       unit: "个",
-      image: "/public/photo/产品首图/首图3.jpg",          // ← 改成包的实际图片文件名
+      image: "/photo/产品首图/首图3.jpg",          // ← 改成包的实际图片文件名
       stock: "充足",
     },
     {
@@ -35,7 +35,7 @@ export default function Home() {
       title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
       price: 22.5,
       unit: "个",
-      image: "/public/photo/产品首图/首图4.jpg", // ← 改成表格里倒数第二个灯的图片
+      image: "/photo/产品首图/首图4.jpg", // ← 改成表格里倒数第二个灯的图片
       stock: "充足",
     },
   ];
