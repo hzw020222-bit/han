@@ -2,21 +2,133 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const products = [
-  // 这里放你全部产品数据（和之前一样）
-  { id: 1, name: "特朗普纪念币", title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design", price: 9.2, unit: "包（3个）", image: "/photo/jyb", stock: "充足", desc: "爱国设计特朗普47任总统纪念币，收藏级礼品，附保护盒。适合特朗普粉丝、爱国主题活动。" },
-  { id: 2, name: "金色壁灯", title: "Golden Wall Lamp QS-BPWL-G-02-NEW", price: 23.4, unit: "个", image: "/photo/1", stock: "充足", desc: "高端金属工艺金色壁灯，现代简约设计，适合客厅、卧室、酒店装饰。" },
-  { id: 3, name: "腰包", title: "Small Sling Backpack Crossbody Bags for Women Chest Bag", price: 5.5, unit: "个", image: "/photo/TLP-JN8", stock: "充足", desc: "时尚小胸包/斜挎包，多色可选，防水耐用，日常出行、旅行首选。" },
-  { id: 4, name: "壁灯", title: "QS-3FSC-01 高端金属工艺壁灯", price: 22.5, unit: "个", image: "/photo/你的灯图片", stock: "充足", desc: "现代简约金属吊灯/壁灯，北欧风格，适合各种室内装饰。" },
-  // 继续把你其他产品都复制进来（id 5~12），我这里先放4个做示例，你可以自己补全
-  { id: 5, name: "马蹄铁", title: "3PCS Good Luck horseshoe-shaped gifts", price: 8.4, unit: "包（3个）", image: "/photo/1", stock: "充足", desc: "复古金属马蹄铁装饰，附标签，好运礼物，适合乡村婚礼、派对装饰。" },
-  // ... 后面产品你照着格式继续加
+  {
+    id: 1,
+    name: "特朗普纪念币",
+    title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
+    price: 9.2,
+    unit: "包（3个）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],   // ← 这里可以加多张
+    stock: "充足",
+    desc: "3个/包 特朗普47任总统纪念币，金色/银色设计，带保护盒。适合收藏、送礼、爱国主题活动使用。"
+  },
+  {
+    id: 2,
+    name: "金色壁灯",
+    title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
+    price: 23.4,
+    unit: "个",
+    images: ["/photo/1", "/photo/1-2", "/photo/1-3"],
+    stock: "充足",
+    desc: "高端金色金属壁灯，现代简约设计，适合客厅、卧室、酒店等空间装饰。"
+  },
+  {
+    id: 3,
+    name: "腰包",
+    title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
+    price: 5.5,
+    unit: "个",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "时尚小胸包/斜挎包，多色可选，防水耐用，日常出行、旅行、购物首选。"
+  },
+  {
+    id: 4,
+    name: "壁灯",
+    title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
+    price: 22.5,
+    unit: "个",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],   // ← 请改成实际文件名
+    stock: "充足",
+    desc: "现代简约金属壁灯/吊灯，北欧风格，高品质工艺，适合各种室内装饰。"
+  },
+  {
+    id: 5,
+    name: "马蹄铁",
+    title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe",
+    price: 8.4,
+    unit: "包（3个）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "复古金属马蹄铁装饰礼品，附 kraft 纸标签，好运象征，适合乡村婚礼、派对装饰。"
+  },
+  {
+    id: 6,
+    name: "圣经钥匙",
+    title: "Three-Piece Set wedding gift bottle openers mixed in 5 colors",
+    price: 8.4,
+    unit: "包（5把）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "5把/包（5种颜色）开瓶器 + 感谢卡 + 钥匙链，适合婚礼、派对、纪念日礼物。"
+  },
+  {
+    id: 7,
+    name: "圣经NFC项链",
+    title: "Talking Cross Necklace, Openable Bible Pendant",
+    price: 10.8,
+    unit: "个",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "可打开的圣经项链，内置NFC芯片，可放入照片并播放鼓励语音，基督教礼物。"
+  },
+  {
+    id: 8,
+    name: "基督教纪念币",
+    title: "3PCS Christian Commemorative Coins",
+    price: 8.4,
+    unit: "包（3个）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "基督教主题纪念币，3个/包，适合宗教活动、收藏、送礼使用。"
+  },
+  {
+    id: 9,
+    name: "幸运头尾硬币",
+    title: "3PCS Lucky Collectible Coins - Vintage Heads and Tails",
+    price: 8.4,
+    unit: "包（3个）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "复古幸运头尾硬币，3个/包，娱乐收藏装饰用，非流通货币。"
+  },
+  {
+    id: 10,
+    name: "48个情侣积木",
+    title: "48pcs Pink And White Couple Adult Game Building Blocks",
+    price: 16.2,
+    unit: "盒（48根）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "情侣成人游戏积木，48根/盒，增加情趣、适合情人节、纪念日使用。"
+  },
+  {
+    id: 11,
+    name: "情侣筛子",
+    title: "Wooden Date Night Decision Dice",
+    price: 8.4,
+    unit: "套（5个筛子+棋盘）",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "情侣约会决策骰子，浪漫互动游戏，附绒布袋，适合情侣夜晚使用。"
+  },
+  {
+    id: 12,
+    name: "特朗普生日贺卡",
+    title: "Pop Up Birthday Card with Light & Sound - Trump Voice",
+    price: 12,
+    unit: "个",
+    images: ["/photo/jyb", "/photo/jyb2", "/photo/jyb3"],
+    stock: "充足",
+    desc: "特朗普语音生日贺卡，打开会发光+播放特朗普语音，趣味生日礼物。"
+  },
 ];
 
 export default function ProductDetail({ params }: { params: { id: string } }) {
   const product = products.find(p => p.id === parseInt(params.id));
 
   if (!product) {
-    return <div className="text-center py-20">产品不存在</div>;
+    return <div className="min-h-screen flex items-center justify-center text-2xl">产品不存在</div>;
   }
 
   return (
@@ -34,9 +146,28 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
         
         <div className="grid md:grid-cols-2 gap-12">
-          {/* 左侧大图 */}
-          <div className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100">
-            <Image src={product.image} alt={product.name} fill className="object-cover" />
+          {/* 图片区 - 支持多图切换 */}
+          <div>
+            <div className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl">
+              <Image 
+                src={product.images[0]} 
+                alt={product.name} 
+                fill 
+                className="object-cover" 
+              />
+            </div>
+            
+            {/* 缩略图列表 */}
+            <div className="flex gap-4 mt-6">
+              {product.images.map((img, index) => (
+                <button
+                  key={index}
+                  className="flex-1 aspect-square rounded-2xl overflow-hidden border-2 border-transparent hover:border-orange-500 transition-colors"
+                >
+                  <Image src={img} alt="" fill className="object-cover" />
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* 右侧信息 */}
@@ -52,10 +183,6 @@ export default function ProductDetail({ params }: { params: { id: string } }) {
 
             <div className="prose text-gray-600 leading-relaxed">
               {product.desc}
-            </div>
-
-            <div className="mt-12 pt-8 border-t">
-              <p className="text-sm text-gray-400">仅供展示 · 价格为参考进货成本</p>
             </div>
           </div>
         </div>
