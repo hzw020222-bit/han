@@ -1,87 +1,117 @@
-import React from 'react';
-import Link from 'next/link';
+import ProductCard from '../components/ProductCard';
 
-// 数据部分保持和首页一致
-const productsData = [
-  { 
-    id: "1", 
-    name: "金工艺品1", 
-    price: "$29.00", 
-    image: "/微信图片_20260310193212_9_21.jpg", 
-    description: "这是第一款金工艺品的详细描述，纯手工制作。" 
-  },
-  { 
-    id: "2", 
-    name: "金工艺品2", 
-    price: "$15.00", 
-    image: "/微信图片_20260310193212_9_21.jpg", 
-    description: "这是第二款金工艺品的详细描述，现代工艺设计。" 
-  },
-  { 
-    id: "3", 
-    name: "金工艺品3", 
-    price: "$12.00", 
-    image: "/微信图片_20260310193212_9_21.jpg", 
-    description: "这是第三款金工艺品的详细描述，小巧精致。" 
-  }
-];
+export default function Home() {
+  const products = [
+    {
+      id: 1,
+      name: "马蹄铁",
+      title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe",
+      price: 8.4,
+      unit: "包（3个）",
+      image: "/photo/1",           // ← 这里改成你 public/photo/ 里实际的文件名
+      stock: "充足",
+    },
+    {
+      id: 2,
+      name: "圣经钥匙",
+      title: "Three-Piece Set wedding gift bottle openers mixed in 5 colors",
+      price: 8.4,
+      unit: "包（5把）",
+      image: "/photo/TLP-JN8",     // ← 改成你实际图片路径
+      stock: "充足",
+    },
+    {
+      id: 3,
+      name: "圣经NFC项链",
+      title: "Talking Cross Necklace, Openable Bible Pendant",
+      price: 10.8,
+      unit: "个",
+      image: "/photo/cross",
+      stock: "充足",
+    },
+    // ... 后面我先放 9 个，你可以继续复制 Excel 里的产品加进来
+    {
+      id: 4,
+      name: "特朗普纪念币",
+      title: "3PCS Trump 47th President Collectible Coins",
+      price: 9.2,
+      unit: "包（3个）",
+      image: "/photo/jyb",         // ← 改成实际路径
+      stock: "充足",
+    },
+    // 你可以把 Excel 里所有产品都加到这个数组里，我后面可以帮你全部写好
+  ];
 
-// 告诉 Vercel 提前生成这些页面
-export async function generateStaticParams() {
-  return productsData.map((product) => ({
-    id: product.id,
-  }));
-}
-
-// ✅ 关键点 1: 必须是 async 函数
-// ✅ 关键点 2: params 必须定义为 Promise 类型
-export default async function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
-  
-  // ✅ 关键点 3: 必须加上 await 才能拿到真正的 id
-  const resolvedParams = await params;
-  const id = resolvedParams.id;
-  
-  // 查找匹配的商品
-  const product = productsData.find(p => String(p.id) === String(id));
-
-  // 如果找不到
-  if (!product) {
-    return (
-      <div className="py-20 text-center">
-        <h2 className="text-xl mb-4">抱歉，未找到该商品 (ID: {id})</h2>
-        <Link href="/" className="text-blue-600">返回首页</Link>
-      </div>
-    );
-  }
-
-  // 渲染页面
   return (
-    <div className="max-w-6xl mx-auto py-12 px-6">
-      <Link href="/" className="text-blue-600 mb-8 inline-block hover:underline">← 返回首页</Link>
-      
-      <div className="flex flex-col md:flex-row gap-12">
-        <div className="w-full md:w-1/2">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full rounded-2xl shadow-lg object-cover aspect-square" 
-          />
-        </div>
-        
-        <div className="w-full md:w-1/2">
-          <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-          <p className="text-3xl text-blue-600 font-bold mb-6">{product.price}</p>
-          
-          <div className="border-t border-b py-6 my-6">
-            <h3 className="font-bold mb-2">商品详情介绍</h3>
-            <p className="text-gray-600 leading-relaxed">{product.description}</p>
+    <>
+      {/* Navbar */}
+      <nav className="bg-white border-b sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 bg-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">📦</div>
+            <div>
+              <span className="text-2xl font-bold tracking-tight">货盘展示</span>
+            </div>
           </div>
-          
-          <button className="w-full bg-blue-600 text-white py-4 rounded-lg text-xl font-bold hover:bg-blue-700">
-            咨询购买详情
-          </button>
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#" className="hover:text-orange-600 transition-colors">首页</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">全部产品</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">关于货盘</a>
+            <a href="#" className="hover:text-orange-600 transition-colors">联系我们</a>
+          </div>
+          <div className="text-sm bg-gray-100 px-5 py-2.5 rounded-2xl font-medium">
+            美国CA2号仓 | 现货充足
+          </div>
         </div>
-      </div>
-    </div>
+      </nav>
+
+      {/* Hero Banner */}
+      <header className="bg-gradient-to-br from-orange-600 to-amber-700 text-white py-24">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="inline-block bg-white/20 text-white text-xs tracking-widest px-6 py-2 rounded-3xl mb-6">
+            原创设计 · 高品质礼物
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
+            货盘产品展示站
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            精选金属工艺品、情侣游戏、特朗普系列、基督教礼物等<br />
+            仅供展示 · 价格透明 · 库存实时
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="#products" 
+               className="bg-white text-orange-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform">
+              浏览全部产品 ↓
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Products Section */}
+      <section id="products" className="max-w-7xl mx-auto px-6 py-16">
+        <div className="flex justify-between items-end mb-10">
+          <div>
+            <h2 className="text-4xl font-bold">热门货盘产品</h2>
+            <p className="text-gray-500 mt-2">共 {products.length} 款 · 持续更新中</p>
+          </div>
+          <div className="text-orange-600 font-medium flex items-center gap-2 cursor-pointer hover:underline">
+            查看全部产品 →
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
+          © 2026 货盘展示站 | 仅作产品展示用途 · 所有图片与价格仅供参考
+        </div>
+      </footer>
+    </>
   );
 }
