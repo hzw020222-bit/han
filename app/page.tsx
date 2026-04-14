@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ProductCard from '../components/ProductCard';
 
 export default function Home() {
@@ -77,9 +78,12 @@ export default function Home() {
             仅供展示
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="#products" 
-               className="bg-white text-orange-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform">
-              浏览全部产品 ↓
+            <Link 
+          href="/products"
+          className="bg-white text-orange-700 px-8 py-4 rounded-2xl font-semibold text-lg hover:scale-105 transition-transform inline-block"
+            >
+          浏览全部产品 ↓
+            </Link>
             </a>
           </div>
         </div>
@@ -90,7 +94,7 @@ export default function Home() {
         <div className="flex justify-between items-end mb-10">
           <div>
             <h2 className="text-4xl font-bold">热门货盘产品</h2>
-            <p className="text-gray-500 mt-2">共 {products.length} 款 · 持续更新中</p>
+                //<p className="text-gray-500 mt-2">共 {products.length} 款 · 持续更新中</p>    
           </div>
           <div className="text-orange-600 font-medium flex items-center gap-2 cursor-pointer hover:underline">
             查看全部产品 →
