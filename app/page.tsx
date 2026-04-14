@@ -107,7 +107,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-6 text-center text-gray-400 text-sm">
-          © 2026 货盘展示站 | 仅作产品展示用途 · 所有图片与价格仅供参考
+          © 2026 货盘展示站 | 仅作产品展示用途 
         </div>
       </footer>
     </>
