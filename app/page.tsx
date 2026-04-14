@@ -73,8 +73,8 @@ export default function Home() {
             货盘产品展示站
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            精选金属工艺品、情侣游戏、特朗普系列、基督教礼物等<br />
-            仅供展示 · 价格透明 · 库存实时
+             <br />
+            仅供展示
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="#products" 
