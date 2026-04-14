@@ -18,7 +18,7 @@ export default function Home() {
       title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
       price: 23.4,
       unit: "个",
-      image: "/photo/产品首图/首图2.jpg",   // ← 改成实际文件名（public/photo/ 里的）
+      image: "/photo/产品首图/首图2.jpg",   // ← 改成实际文件名
       stock: "充足",
     },
     {
