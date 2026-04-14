@@ -22,7 +22,7 @@ export default function Home() {
     },
     {
       id: 3,
-      name: "Small Sling Backpack",
+      name: "腰包",
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
       price: 5.5,
       unit: "个",
