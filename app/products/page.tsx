@@ -135,7 +135,7 @@ export default function AllProducts() {
         <div className="flex justify-between items-center mb-10">
           <div>
             <h1 className="text-4xl font-bold">全部货盘产品</h1>
-            <p className="text-gray-500 mt-2">共 {products.length} 款产品 · 持续更新中</p>
+          
           </div>
           <Link href="/" className="text-orange-600 hover:underline flex items-center gap-1">
             ← 返回首页
