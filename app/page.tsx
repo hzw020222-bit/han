@@ -1,45 +1,43 @@
 import ProductCard from '../components/ProductCard';
 
 export default function Home() {
-  const products = [
+    const products = [
     {
       id: 1,
-      name: "马蹄铁",
-      title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe",
-      price: 8.4,
+      name: "特朗普纪念币",
+      title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
+      price: 9.2,
       unit: "包（3个）",
-      image: "/photo/1",           // ← 这里改成你 public/photo/ 里实际的文件名
+      image: "/photo/jyb",           // ← 改成你实际的特朗普币图片文件名
       stock: "充足",
     },
     {
       id: 2,
-      name: "圣经钥匙",
-      title: "Three-Piece Set wedding gift bottle openers mixed in 5 colors",
-      price: 8.4,
-      unit: "包（5把）",
-      image: "/photo/TLP-JN8",     // ← 改成你实际图片路径
+      name: "金色壁灯",
+      title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
+      price: 23.4,
+      unit: "个",
+      image: "/photo/你的金色壁灯图片文件名",   // ← 改成实际文件名（public/photo/ 里的）
       stock: "充足",
     },
     {
       id: 3,
-      name: "圣经NFC项链",
-      title: "Talking Cross Necklace, Openable Bible Pendant",
-      price: 10.8,
+      name: "Small Sling Backpack",
+      title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
+      price: 5.5,
       unit: "个",
-      image: "/photo/cross",
+      image: "/photo/你的包图片文件名",          // ← 改成包的实际图片文件名
       stock: "充足",
     },
-    // ... 后面我先放 9 个，你可以继续复制 Excel 里的产品加进来
     {
       id: 4,
-      name: "特朗普纪念币",
-      title: "3PCS Trump 47th President Collectible Coins",
-      price: 9.2,
-      unit: "包（3个）",
-      image: "/photo/jyb",         // ← 改成实际路径
+      name: "壁灯",
+      title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
+      price: 22.5,
+      unit: "个",
+      image: "/photo/你的倒数第二个灯图片文件名", // ← 改成表格里倒数第二个灯的图片
       stock: "充足",
     },
-    // 你可以把 Excel 里所有产品都加到这个数组里，我后面可以帮你全部写好
   ];
 
   return (
