@@ -93,7 +93,7 @@ export default function Home() {
                    
           </div>
           <div className="text-orange-600 font-medium flex items-center gap-2 cursor-pointer hover:underline">
-            查看全部产品 →
+            
           </div>
         </div>
 
