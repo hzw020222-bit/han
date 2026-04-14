@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const products = [
-  { id: 1, name: "特朗普纪念币", title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design", price: 9.2, unit: "包（3个）", images: ["/photo/jyb"], stock: "充足", desc: "3个/包 特朗普47任总统纪念币，金色/银色设计，带保护盒。适合收藏、送礼、爱国主题活动使用。" },
+  { id: 1, name: "特朗普纪念币", title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design", price: 9.2, unit: "包（3个）", images: ["/photo/产品首图/首图1.jpg"], stock: "充足", desc: "3个/包 特朗普47任总统纪念币，金色/银色设计，带保护盒。适合收藏、送礼、爱国主题活动使用。" },
   { id: 2, name: "金色壁灯", title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯", price: 23.4, unit: "个", images: ["/photo/1"], stock: "充足", desc: "高端金色金属壁灯，现代简约设计，适合客厅、卧室、酒店等空间装饰。" },
   { id: 3, name: "腰包", title: "Small Sling Backpack Crossbody Bags for Women Chest Bag", price: 5.5, unit: "个", images: ["/photo/TLP-JN8"], stock: "充足", desc: "时尚小胸包/斜挎包，多色可选，防水耐用，日常出行、旅行、购物首选。" },
   { id: 4, name: "壁灯", title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计", price: 22.5, unit: "个", images: ["/photo/你的灯图片"], stock: "充足", desc: "现代简约金属壁灯/吊灯，北欧风格，高品质工艺，适合各种室内装饰。" },
