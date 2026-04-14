@@ -44,22 +44,32 @@ export default function Home() {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-white border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-orange-600 rounded-xl flex items-center justify-center text-white font-bold text-2xl">📦</div>
-            <div>
-              <span className="text-2xl font-bold tracking-tight">货盘展示</span>
-            </div>
-          </div>
-                   <div className="hidden md:flex gap-8 text-sm font-medium">
+                <div className="hidden md:flex gap-8 text-sm font-medium items-center">
             <a href="/" className="hover:text-orange-600 transition-colors">首页</a>
             <Link href="/products" className="hover:text-orange-600 transition-colors">全部产品</Link>
-            <a href="#" className="hover:text-orange-600 transition-colors">联系我们</a>
+            
+            {/* 联系我们 - 下拉菜单 */}
+            <div className="relative group">
+              <button className="hover:text-orange-600 transition-colors flex items-center gap-1">
+                联系我们
+                <span className="text-xs">▼</span>
+              </button>
+              
+              {/* 下拉菜单 */}
+              <div className="absolute right-0 mt-2 w-64 bg-white shadow-xl rounded-2xl py-3 px-4 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <a 
+                  href="mailto:3034279102@qq.com"
+                  className="flex items-center gap-3 px-4 py-3 hover:bg-orange-50 rounded-xl transition-colors"
+                >
+                  <span className="text-orange-600 text-xl">✉️</span>
+                  <div>
+                    <div className="font-medium text-gray-900">3034279102@qq.com</div>
+                    <div className="text-xs text-gray-500">点击发送邮件</div>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-         
-        </div>
-      </nav>
 
       {/* Hero Banner */}
       <header className="bg-gradient-to-br from-orange-600 to-amber-700 text-white py-24">
