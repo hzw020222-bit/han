@@ -111,6 +111,15 @@ export default function AllProducts() {
       images: ["/photo/你的图片"],
       stock: "充足",
     },
+    {
+      id: 13,
+      name: "6寸美规面板灯（6只装）",
+      title: "QS-PL-YL6-12W",
+      price: 25.2,
+      unit: "6只",
+      images: ["/photo/你的图片"],
+      stock: "充足",
+    },
   ];
 
   return (
