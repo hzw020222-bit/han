@@ -32,7 +32,7 @@ export default function AllProducts() {
     },
     {
       id: 4,
-      name: "壁灯",
+      name: "农舍三头灯",
       title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
       price: 22.5,
       unit: "个",
