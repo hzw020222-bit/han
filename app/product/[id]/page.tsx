@@ -32,10 +32,10 @@ const products = [
     unit: "个",
     images: ["/photo/TLP-JN8"],
     stock: "充足",
-    desc: "Stylish & Versatile Crossbody Design: This simple ladies chest bag combines fashion and function, offering a sleek design that works as a crossbody, shoulder bag, or sling pack, ideal for daily use, travel, shopping, and outdoor activities
-Compact Yet Spacious Storage: With multiple compartments, this bag offers ample space for your essentials and keeps them organized and secure
-Premium Material & Durable Craftsmanship: Made from high-quality, water-resistant fabric, this sling bag is durable and features smooth zippers for easy use
-Comfortable & Adjustable Fit: The adjustable strap ensures a comfortable, customized fit, reducing shoulder strain for all-day wear
+    desc: "Stylish & Versatile Crossbody Design: This simple ladies chest bag combines fashion and function, offering a sleek design that works as a crossbody, shoulder bag, or sling pack, ideal for daily use, travel, shopping, and outdoor activities.
+Compact Yet Spacious Storage: With multiple compartments, this bag offers ample space for your essentials and keeps them organized and secure.
+Premium Material & Durable Craftsmanship: Made from high-quality, water-resistant fabric, this sling bag is durable and features smooth zippers for easy use.
+Comfortable & Adjustable Fit: The adjustable strap ensures a comfortable, customized fit, reducing shoulder strain for all-day wear.
 Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is perfect for shopping, traveling, or errands, making it a great gift for women of all ages",
     warehouse: "美东GA仓\n地址：1050 Northfield Ct, Ste 240, Roswell, GA 30076 USA\n电话：6784620469\n收件人：Ivan Zhang"
   },
