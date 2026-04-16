@@ -212,6 +212,26 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
   const [currentImage, setCurrentImage] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // ── 触摸滑动支持 ──
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent, total: number) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        setCurrentImage(prev => (prev + 1) % total);
+      } else {
+        setCurrentImage(prev => (prev - 1 + total) % total);
+      }
+    }
+    touchStartX.current = null;
+  };
+
   if (!product) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -223,8 +243,11 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
     );
   }
 
+  const total = product.images.length;
+
   return (
     <>
+      {/* ── 导航栏 ── */}
       <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -256,30 +279,68 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* 图片区 - 严格限制大小 */}
+
+          {/* ── 图片区 ── */}
           <div>
-            <div 
-              className="relative max-w-[480px] max-h-[380px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
+            {/*
+              ✅ 修复点：主图容器加了明确的 height（h-[380px]）
+              Next.js Image fill 必须有明确高度，否则容器塌陷 → 图片失控撑满屏幕
+            */}
+            <div
+              className="relative w-full h-[380px] mx-auto rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
               onClick={() => setIsModalOpen(true)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={(e) => handleTouchEnd(e, total)}
             >
-              <Image 
-                src={product.images[currentImage]} 
-                alt={product.name} 
-                fill 
-                className="object-contain p-6" 
+              <Image
+                src={product.images[currentImage]}
+                alt={product.name}
+                fill
+                className="object-contain p-6"
+                priority
               />
+
+              {/* 图片计数角标（多图时显示） */}
+              {total > 1 && (
+                <div className="absolute bottom-3 right-4 bg-black/40 text-white text-xs px-2 py-1 rounded-full">
+                  {currentImage + 1} / {total}
+                </div>
+              )}
+
+              {/* 左右切换箭头（主图，多图时显示） */}
+              {total > 1 && (
+                <>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setCurrentImage(prev => (prev - 1 + total) % total); }}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white w-9 h-9 rounded-full flex items-center justify-center shadow-md text-lg transition-all"
+                  >
+                    ←
+                  </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setCurrentImage(prev => (prev + 1) % total); }}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white w-9 h-9 rounded-full flex items-center justify-center shadow-md text-lg transition-all"
+                  >
+                    →
+                  </button>
+                </>
+              )}
             </div>
 
-            {product.images.length > 1 && (
+            {/* 缩略图列表 */}
+            {total > 1 && (
               <div className="flex gap-3 mt-6 overflow-x-auto pb-2 justify-center">
                 {product.images.map((img, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImage(index)}
-                    className={`flex-shrink-0 w-20 h-20 rounded-2xl overflow-hidden border-2 transition-all ${
+                    className={`flex-shrink-0 w-20 h-20 relative rounded-2xl overflow-hidden border-2 transition-all ${
                       currentImage === index ? 'border-orange-600 scale-110' : 'border-transparent hover:border-gray-300'
                     }`}
                   >
+                    {/*
+                      ✅ 修复点：缩略图按钮加了 relative + 明确尺寸（w-20 h-20），
+                      Image fill 才有容器可填充，不会溢出
+                    */}
                     <Image src={img} alt="" fill className="object-cover" />
                   </button>
                 ))}
@@ -287,7 +348,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             )}
           </div>
 
-          {/* 右侧信息 */}
+          {/* ── 右侧信息 ── */}
           <div>
             <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-500 mb-6">{product.title}</p>
@@ -309,43 +370,61 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 点击放大弹窗 - 严格限制大小 */}
+      {/* ── 点击放大弹窗 ── */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
           onClick={() => setIsModalOpen(false)}
         >
-          <div 
-            className="relative max-w-[88vw] max-h-[82vh] w-full"
+          <div
+            className="relative w-full max-w-[90vw]"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={(e) => handleTouchEnd(e, total)}
           >
-            <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl">
-              <Image 
-                src={product.images[currentImage]} 
-                alt={product.name} 
-                fill 
-                className="object-contain" 
+            {/*
+              ✅ 核心修复：给弹窗图片容器加了明确高度 h-[75vh]
+              原来只有 relative + overflow-hidden，没有高度 → 容器高度为 0
+              → Image fill 撑破容器 → 图片自动占满整个屏幕
+
+              现在：容器有固定高度，Image fill 在容器内部 object-contain 居中显示
+            */}
+            <div className="relative w-full h-[75vh] bg-white rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src={product.images[currentImage]}
+                alt={product.name}
+                fill
+                className="object-contain p-4"
               />
+
+              {/* 弹窗内图片计数 */}
+              {total > 1 && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/40 text-white text-sm px-3 py-1 rounded-full">
+                  {currentImage + 1} / {total}
+                </div>
+              )}
             </div>
 
-            <button 
+            {/* 关闭按钮 */}
+            <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute -top-4 -right-4 bg-white text-gray-700 w-11 h-11 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-3xl"
+              className="absolute -top-4 -right-4 bg-white text-gray-700 w-11 h-11 rounded-full flex items-center justify-center shadow-xl hover:bg-gray-100 text-xl font-bold"
             >
               ✕
             </button>
 
-            {product.images.length > 1 && (
+            {/* 弹窗左右切换 */}
+            {total > 1 && (
               <>
-                <button 
-                  onClick={() => setCurrentImage(prev => (prev - 1 + product.images.length) % product.images.length)}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                <button
+                  onClick={() => setCurrentImage(prev => (prev - 1 + total) % total)}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl text-2xl transition-all"
                 >
                   ←
                 </button>
-                <button 
-                  onClick={() => setCurrentImage(prev => (prev + 1) % product.images.length)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                <button
+                  onClick={() => setCurrentImage(prev => (prev + 1) % total)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl text-2xl transition-all"
                 >
                   →
                 </button>
