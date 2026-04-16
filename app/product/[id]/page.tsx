@@ -259,7 +259,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <div className="grid md:grid-cols-2 gap-12">
           {/* 图片区 */}
           <div>
-            {/* 主图 - 点击可放大 */}
             <div 
               className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
               onClick={() => setIsModalOpen(true)}
@@ -272,7 +271,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               />
             </div>
 
-            {/* 缩略图 */}
             {product.images.length > 1 && (
               <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
                 {product.images.map((img, index) => (
@@ -294,17 +292,14 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           <div>
             <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-500 mb-6">{product.title}</p>
-            
             <div className="flex items-center gap-4 mb-8">
               <span className="text-5xl font-semibold text-orange-600">${product.price}</span>
               <span className="text-xl text-gray-400">/ {product.unit}</span>
               <span className="bg-green-100 text-green-700 px-4 py-2 rounded-2xl text-sm font-medium">库存充足</span>
             </div>
-
             <div className="prose text-gray-600 leading-relaxed whitespace-pre-line mb-10">
               {product.desc}
             </div>
-
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 text-sm">
               <div className="font-medium text-gray-900 mb-2">📦 发货仓库地址</div>
               <div className="whitespace-pre-line text-gray-600">
@@ -315,17 +310,16 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-            {/* 放大弹窗 */}
+      {/* 全屏放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center"
           onClick={() => setIsModalOpen(false)}
         >
           <div 
-            className="relative max-w-5xl w-full mx-4" 
-            onClick={(e) => e.stopPropagation()}   // ← 这里已修复
+            className="relative max-w-5xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* 大图 */}
             <div className="relative aspect-square max-h-[85vh] bg-white rounded-3xl overflow-hidden">
               <Image 
                 src={product.images[currentImage]} 
@@ -335,7 +329,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               />
             </div>
 
-            {/* 关闭按钮 */}
             <button 
               onClick={() => setIsModalOpen(false)}
               className="absolute -top-4 -right-4 bg-white text-gray-700 w-10 h-10 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-2xl"
@@ -343,7 +336,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               ✕
             </button>
 
-            {/* 左右切换按钮 */}
             {product.images.length > 1 && (
               <>
                 <button 
@@ -363,3 +355,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
+    </>
+  );
+}
