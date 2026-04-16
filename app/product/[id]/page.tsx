@@ -255,19 +255,38 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
-        <div className="grid md:grid-cols-2 gap-12">
+          {/* 图片区 - 严格控制大小 */}
           <div>
+            {/* 主图容器 - 更严格限制 */}
             <div 
-              className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in max-h-[480px]"
+              className="relative max-w-[520px] max-h-[420px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
               onClick={() => setIsModalOpen(true)}
             >
               <Image 
                 src={product.images[currentImage]} 
                 alt={product.name} 
                 fill 
-                className="object-contain p-4 transition-all duration-300 hover:scale-105" 
+                className="object-contain p-6 transition-all duration-300 hover:scale-105" 
               />
             </div>
+
+            {/* 缩略图 */}
+            {product.images.length > 1 && (
+              <div className="flex gap-3 mt-6 overflow-x-auto pb-2 justify-center">
+                {product.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`flex-shrink-0 w-20 h-20 rounded-2xl overflow-hidden border-2 transition-all ${
+                      currentImage === index ? 'border-orange-600 scale-110' : 'border-transparent hover:border-gray-300'
+                    }`}
+                  >
+                    <Image src={img} alt="" fill className="object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
             {product.images.length > 1 && (
               <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
@@ -307,14 +326,14 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 全屏放大弹窗 */}
+      {/* 全屏放大弹窗 - 更紧凑 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
           onClick={() => setIsModalOpen(false)}
         >
           <div 
-            className="relative max-w-[92vw] max-h-[85vh] w-full"
+            className="relative max-w-[90vw] max-h-[88vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl">
@@ -352,6 +371,5 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
-    </>
   );
 }
