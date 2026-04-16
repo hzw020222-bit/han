@@ -63,7 +63,7 @@ export default function AllProducts() {
       title: "Talking Cross Necklace, Openable Bible Pendant",
       price: 10.8,
       unit: "个",
-      images: ["/photo/圣经NF项链/1.jpg"],
+      images: ["/photo/圣经NFC项链/1.jpg"],
       stock: "充足",
     },
     {
