@@ -94,7 +94,7 @@ export default function Home() {
             原创设计 · 高品质
           </div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
-            货盘产品展示站
+            货盘展示站
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
              <br />
