@@ -225,6 +225,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
   return (
     <>
+      {/* Navbar */}
       <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -256,16 +257,17 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
         <div className="grid md:grid-cols-2 gap-12">
+          {/* 图片区 - 严格限制大小 */}
           <div>
             <div 
-              className="relative max-w-[520px] max-h-[420px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
+              className="relative max-w-[480px] max-h-[380px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
               onClick={() => setIsModalOpen(true)}
             >
               <Image 
                 src={product.images[currentImage]} 
                 alt={product.name} 
                 fill 
-                className="object-contain p-6 transition-all duration-300 hover:scale-105" 
+                className="object-contain p-6" 
               />
             </div>
 
@@ -286,6 +288,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             )}
           </div>
 
+          {/* 右侧信息 */}
           <div>
             <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-500 mb-6">{product.title}</p>
@@ -307,13 +310,14 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
+      {/* 点击放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
           onClick={() => setIsModalOpen(false)}
         >
           <div 
-            className="relative max-w-[90vw] max-h-[88vh] w-full"
+            className="relative max-w-[88vw] max-h-[82vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl">
