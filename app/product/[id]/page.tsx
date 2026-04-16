@@ -8,7 +8,7 @@ const products = [
     title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design, Trump Memorial Coin Collector Christmas Holiday Gift with Protective Box（Non-circulating currency）",
     price: 9.2,
     unit: "包（3个）",
-    images: ["/photo/特朗普币/1.jpg""/photo/特朗普币/2.jpg""/photo/特朗普币/3.jpg""/photo/特朗普币/4.jpg""/photo/特朗普币/5.jpg""/photo/特朗普币/6.jpg""/photo/特朗普币/7.jpeg"],
+    images: ["/photo/特朗普币/1.jpg","/photo/特朗普币/2.jpg","/photo/特朗普币/3.jpg","/photo/特朗普币/4.jpg","/photo/特朗普币/5.jpg","/photo/特朗普币/6.jpg","/photo/特朗普币/7.jpeg"],
     stock: "充足",
     desc: `Whether Props Banknotes: Other Currency Prop Banknotes
 Applicable Age Group: 14 Years+
