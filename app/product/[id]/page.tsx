@@ -225,7 +225,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
   return (
     <>
-      {/* Navbar */}
       <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -256,11 +255,10 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
-       {/* 图片区 - 严格控制大小 + 点击放大 */}
+        <div className="grid md:grid-cols-2 gap-12">
           <div>
-            {/* 主图容器 - 限制最大高度 */}
             <div 
-              className="relative w-full max-h-[480px] aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in mx-auto"
+              className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in max-h-[480px]"
               onClick={() => setIsModalOpen(true)}
             >
               <Image 
@@ -271,9 +269,8 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               />
             </div>
 
-            {/* 缩略图 */}
             {product.images.length > 1 && (
-              <div className="flex gap-3 mt-6 overflow-x-auto pb-2 justify-center">
+              <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
                 {product.images.map((img, index) => (
                   <button
                     key={index}
@@ -289,7 +286,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             )}
           </div>
 
-          {/* 右侧信息 */}
           <div>
             <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-500 mb-6">{product.title}</p>
@@ -311,7 +307,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-            {/* 全屏放大弹窗 */}
+      {/* 全屏放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
@@ -330,7 +326,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               />
             </div>
 
-            {/* 关闭按钮 */}
             <button 
               onClick={() => setIsModalOpen(false)}
               className="absolute -top-4 -right-4 bg-white text-gray-700 w-11 h-11 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-3xl"
@@ -338,7 +333,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               ✕
             </button>
 
-            {/* 左右切换按钮 */}
             {product.images.length > 1 && (
               <>
                 <button 
@@ -358,3 +352,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
+    </>
+  );
+}
