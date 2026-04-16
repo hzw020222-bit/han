@@ -9,7 +9,7 @@ export default function AllProducts() {
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
       price: 9.2,
       unit: "包（3个）",
-      images: ["/photo/jyb"],           // ← 必须是数组
+      images: ["/photo/特朗普币/1.jpg"],           // ← 必须是数组
       stock: "充足",
     },
     {
@@ -18,7 +18,7 @@ export default function AllProducts() {
       title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
       price: 23.4,
       unit: "个",
-      images: ["/photo/1"],
+      images: ["/photo/金色壁灯/1.jpg"],
       stock: "充足",
     },
     {
@@ -27,7 +27,7 @@ export default function AllProducts() {
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
       price: 5.5,
       unit: "个",
-      images: ["/photo/TLP-JN8"],
+      images: ["/photo/腰包/1.jpeg"],
       stock: "充足",
     },
     {
@@ -36,7 +36,7 @@ export default function AllProducts() {
       title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
       price: 22.5,
       unit: "个",
-      images: ["/photo/你的灯图片"],     // ← 改成你实际文件名
+      images: ["/photo/农舍三头灯/1.jpeg"],     // ← 改成你实际文件名
       stock: "充足",
     },
     {
@@ -45,7 +45,7 @@ export default function AllProducts() {
       title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe",
       price: 8.4,
       unit: "包（3个）",
-      images: ["/photo/1"],
+      images: ["/photo/马蹄铁/1.jpg"],
       stock: "充足",
     },
     {
@@ -54,7 +54,7 @@ export default function AllProducts() {
       title: "Three-Piece Set wedding gift bottle openers mixed in 5 colors",
       price: 8.4,
       unit: "包（5把）",
-      images: ["/photo/TLP-JN8"],
+      images: ["/photo/圣经钥匙/1.jpeg"],
       stock: "充足",
     },
     {
@@ -63,7 +63,7 @@ export default function AllProducts() {
       title: "Talking Cross Necklace, Openable Bible Pendant",
       price: 10.8,
       unit: "个",
-      images: ["/photo/cross"],
+      images: ["/photo/圣经NFC钥匙/1.jpg"],
       stock: "充足",
     },
     {
@@ -72,7 +72,7 @@ export default function AllProducts() {
       title: "3PCS Christian Commemorative Coins",
       price: 8.4,
       unit: "包（3个）",
-      images: ["/photo/jyb"],
+      images: ["/photo/基督币/2.jpg"],
       stock: "充足",
     },
     {
@@ -81,7 +81,7 @@ export default function AllProducts() {
       title: "3PCS Lucky Collectible Coins - Vintage Heads and Tails",
       price: 8.4,
       unit: "包（3个）",
-      images: ["/photo/jyb"],
+      images: ["/photo/幸运币/6.jpg"],
       stock: "充足",
     },
     {
@@ -90,7 +90,7 @@ export default function AllProducts() {
       title: "48pcs Pink And White Couple Adult Game Building Blocks",
       price: 16.2,
       unit: "盒（48根）",
-      images: ["/photo/你的图片"],       // ← 改成实际文件名
+      images: ["/photo/积木/1.png"],       // ← 改成实际文件名
       stock: "充足",
     },
     {
@@ -99,7 +99,7 @@ export default function AllProducts() {
       title: "Wooden Date Night Decision Dice",
       price: 8.4,
       unit: "套（5个筛子+棋盘）",
-      images: ["/photo/你的图片"],
+      images: ["/photo/筛子/1.jpeg"],
       stock: "充足",
     },
     {
@@ -108,7 +108,7 @@ export default function AllProducts() {
       title: "Pop Up Birthday Card with Light & Sound - Trump Voice",
       price: 12,
       unit: "个",
-      images: ["/photo/你的图片"],
+      images: ["/photo/特朗普贺卡/1.jpg"],
       stock: "充足",
     },
     {
@@ -117,7 +117,7 @@ export default function AllProducts() {
       title: "QS-PL-YL6-12W",
       price: 25.2,
       unit: "6只",
-      images: ["/photo/你的图片"],
+      images: ["/photo/面板灯/1.jpeg"],
       stock: "充足",
     },
   ];
