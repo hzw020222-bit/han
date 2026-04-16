@@ -25,7 +25,7 @@ Non-circulating currency`,
     title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
     price: 23.4,
     unit: "个",
-    images: ["/photo/金色壁灯/1.jpg","/photo/金色壁灯/2.jpg","/photo/金色壁灯/3.jpg","/photo/金色壁灯/4.jpg","/photo/金色壁灯/5.jpg","/photo/金色壁灯/6.jpg","/photo/金色壁灯/7.jpg","/photo/金色壁灯/8.jpg","/photo/金色壁灯/9.jpg","/photo/金色壁灯/10.jpg","/photo/金色壁灯/11.jpg","/photo/金色壁灯/12.jpg",],
+    images: ["/photo/金色壁灯/1.jpg","/photo/金色壁灯/2.jpg","/photo/金色壁灯/3.jpg","/photo/金色壁灯/4.jpg","/photo/金色壁灯/5.jpg","/photo/金色壁灯/6.jpg","/photo/金色壁灯/7.jpg","/photo/金色壁灯/8.jpg","/photo/金色壁灯/9.jpg","/photo/金色壁灯/10.jpg","/photo/金色壁灯/11.jpg","/photo/金色壁灯/12.jpg"],
     stock: "充足",
     desc: `QS-BPWL-G-02-NEW 高端金属工艺壁灯，现代简约设计，适合客厅、卧室、酒店装饰。(标题和详情在tiktok或亚马逊上面拍照搜索同行的)`,
     warehouse: "美东仓认证(Trmax)\n地址：1202A Airport Rd, North Brunswick Township, NJ 08902\n电话：6096137559\n收件人：Yan"
@@ -36,7 +36,7 @@ Non-circulating currency`,
     title: "Small Sling Bakpack Crossbody Bags for Women Chest Bag Cross Body Bag Fanny Pack for Outdoors Hiking Traveling,Crossbody Small Sling Backpack Sling Bag for Women Men,Mother's Day Gifts",
     price: 5.5,
     unit: "个",
-    images: ["/photo/腰包/1.jpeg"],
+    images: ["/photo/腰包/1.jpeg","/photo/腰包/2.jpeg","/photo/腰包/3.jpeg","/photo/腰包/4.jpeg","/photo/腰包/5.jpeg","/photo/腰包/6.jpeg","/photo/腰包/7.jpeg","/photo/腰包/8.jpeg","/photo/腰包/9.jpeg","/photo/腰包/10.jpeg","/photo/腰包/11.jpg","/photo/腰包/12.jpg","/photo/腰包/13.jpeg"],
     stock: "充足",
     desc: `Stylish & Versatile Crossbody Design: This simple ladies chest bag combines fashion and function, offering a sleek design that works as a crossbody, shoulder bag, or sling pack, ideal for daily use, travel, shopping, and outdoor activities.
 Compact Yet Spacious Storage: With multiple compartments, this bag offers ample space for your essentials and keeps them organized and secure.
@@ -51,7 +51,7 @@ Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is
     title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
     price: 22.5,
     unit: "个",
-    images: ["/photo/农舍三头灯/1.jpeg"],
+    images: ["/photo/农舍三头灯/1.jpeg","/photo/农舍三头灯/2.jpeg","/photo/农舍三头灯/3.jpeg","/photo/农舍三头灯/4.jpeg","/photo/农舍三头灯/5.jpeg","/photo/农舍三头灯/6.jpeg","/photo/农舍三头灯/7.jpeg","/photo/农舍三头灯/8.jpeg"],
     stock: "充足",
     desc: `QS-3FSC-01 高端金属工艺壁灯，现代简约设计，适合各种室内装饰。(标题和详情在tiktok或亚马逊上面拍照搜索同行的)`,
     warehouse: "美联达美西6号仓\n地址：4401 Eucalyptus Ave, Chino CA 91710\n联系人：Gary\n联系电话：9094090891 / 9297893222"
@@ -62,7 +62,7 @@ Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is
     title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe-shaped with kraft paper labels, country horse shoes gifts, retro wedding party decorations, Kentucky Derby party decorations, Valentine's Day decorations",
     price: 8.4,
     unit: "包（3个）",
-    images: ["/photo/马蹄铁/1.jpg"],
+    images: ["/photo/马蹄铁/1.jpg","/photo/马蹄铁/2.jpg","/photo/马蹄铁/3.jpg","/photo/马蹄铁/4.jpg","/photo/马蹄铁/5.jpg","/photo/马蹄铁/6.jpg","/photo/马蹄铁/7.jpg","/photo/马蹄铁/8.jpg"],
     stock: "充足",
     desc: `Regarding this product:
 You will receive: There are a total of 3 horseshoe-shaped decorations in the package, approximately 7x6 cm /2.8x2.4 inches in size, with sufficient ropes, approximately 30 cm /11.8 inches in length, and the label size is approximately 9x4.5 cm /3.5x1.8 inches; A sufficient quantity can easily meet your decoration needs
