@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const products = [
   {
@@ -22,7 +24,7 @@ Non-circulating currency`,
     title: "Golden Wall Lamp QS-BPWL-G-02-NEW 高端金属工艺壁灯",
     price: 23.4,
     unit: "个",
-    images: ["/photo/1"],
+    images: ["/photo/金色壁灯/1.jpg","/photo/金色壁灯/2.jpg","/photo/金色壁灯/3.jpg","/photo/金色壁灯/4.jpg","/photo/金色壁灯/5.jpg","/photo/金色壁灯/6.jpg","/photo/金色壁灯/7.jpg","/photo/金色壁灯/8.jpg","/photo/金色壁灯/9.jpg","/photo/金色壁灯/10.jpg","/photo/金色壁灯/11.jpg","/photo/金色壁灯/12.jpg",],
     stock: "充足",
     desc: `QS-BPWL-G-02-NEW 高端金属工艺壁灯，现代简约设计，适合客厅、卧室、酒店装饰。(标题和详情在tiktok或亚马逊上面拍照搜索同行的)`,
     warehouse: "美东仓认证(Trmax)\n地址：1202A Airport Rd, North Brunswick Township, NJ 08902\n电话：6096137559\n收件人：Yan"
@@ -202,9 +204,10 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
   }
 ];
 
-export default async function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = React.use(params); // Next.js 15+ 需要这样写
   const product = products.find(p => p.id === parseInt(id));
+  const [currentImage, setCurrentImage] = useState(0);
 
   if (!product) {
     return (
@@ -219,7 +222,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
 
   return (
     <>
-      {/* Navbar - 统一美观版本 */}
+      {/* Navbar */}
       <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -231,10 +234,9 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
             <Link href="/products" className="text-orange-600 font-semibold">全部产品</Link>
             <div className="relative group">
               <button className="hover:text-orange-600 transition-colors flex items-center gap-1">
-                联系我们
-                <span className="text-xs">▼</span>
+                联系我们 <span className="text-xs">▼</span>
               </button>
-              <div className="absolute right-0 mt-3 w-72 bg-white shadow-2xl rounded-2xl py-4 px-5 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute right-0 mt-3 w-72 bg-white shadow-2xl rounded-2xl py-4 px-5 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
                 <a href="mailto:3034279102@qq.com" className="flex items-center gap-3 px-4 py-3 hover:bg-orange-50 rounded-2xl transition-colors">
                   <span className="text-2xl">✉️</span>
                   <div>
@@ -245,33 +247,60 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
               </div>
             </div>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-sm bg-gray-100 px-5 py-2.5 rounded-3xl font-medium">
-            <span className="text-green-600">●</span>
-            美国仓 | 现货充足
-          </div>
         </div>
       </nav>
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
+          {/* 图片区 - 多图切换 */}
           <div>
+            {/* 主图 */}
             <div className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl">
-              <Image src={product.images[0]} alt={product.name} fill className="object-cover" />
+              <Image 
+                src={product.images[currentImage]} 
+                alt={product.name} 
+                fill 
+                className="object-cover transition-all duration-300" 
+              />
             </div>
+
+            {/* 缩略图列表 */}
+            {product.images.length > 1 && (
+              <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
+                {product.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`flex-shrink-0 w-20 h-20 rounded-2xl overflow-hidden border-2 transition-all ${
+                      currentImage === index 
+                        ? 'border-orange-600 scale-110' 
+                        : 'border-transparent hover:border-gray-300'
+                    }`}
+                  >
+                    <Image src={img} alt="" fill className="object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
+
+          {/* 右侧信息 */}
           <div>
             <h1 className="text-4xl font-bold mb-2">{product.name}</h1>
             <p className="text-gray-500 mb-6">{product.title}</p>
+            
             <div className="flex items-center gap-4 mb-8">
               <span className="text-5xl font-semibold text-orange-600">${product.price}</span>
               <span className="text-xl text-gray-400">/ {product.unit}</span>
               <span className="bg-green-100 text-green-700 px-4 py-2 rounded-2xl text-sm font-medium">库存充足</span>
             </div>
+
             <div className="prose text-gray-600 leading-relaxed whitespace-pre-line mb-10">
               {product.desc}
             </div>
+
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-5 text-sm">
               <div className="font-medium text-gray-900 mb-2">📦 发货仓库地址</div>
               <div className="whitespace-pre-line text-gray-600">
