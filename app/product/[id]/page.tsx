@@ -315,13 +315,16 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 放大弹窗 */}
+            {/* 放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center"
           onClick={() => setIsModalOpen(false)}
         >
-          <div className="relative max-w-5xl w-full mx-4" onClick={e => e.stopImmediatePropagation()}>
+          <div 
+            className="relative max-w-5xl w-full mx-4" 
+            onClick={(e) => e.stopPropagation()}   // ← 这里已修复
+          >
             {/* 大图 */}
             <div className="relative aspect-square max-h-[85vh] bg-white rounded-3xl overflow-hidden">
               <Image 
@@ -360,6 +363,3 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
-    </>
-  );
-}
