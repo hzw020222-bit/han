@@ -203,6 +203,19 @@ Safe & Durable Construction: Made with heat-dissipating materials and an integra
 Easy to Install: The LED recessed light comes with clear instructions and all necessary mounting accessories. Installation involves three main steps: 1) Use the included round template to cut a 6.14-inch (155mm) hole in the ceiling. 2) Connect the wires. 3) Insert the light into the ceiling. You can install multiple recessed lights in under 30 minutes to update your home lighting.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
   }
+  {
+    id: 14,
+    name: "开瓶器",
+    title: "Legend Messi 10 Jersey Wine Opener – Durable Zinc Alloy, Football-Themed Design, Great Gift for Fans & Collectors",
+    price: 30,
+    unit: "套",
+    images: ["/photo/开瓶器/1.jpg","/photo/开瓶器/2.jpg","/photo/开瓶器/3.jpg","/photo/开瓶器/4.jpg","/photo/开瓶器/5.jpg","/photo/开瓶器/6.jpg","/photo/开瓶器/7.jpg","/photo/开瓶器/8.jpg","/photo/开瓶器/9.jpg","/photo/开瓶器/10.jpg","/photo/开瓶器/11.jpg","/photo/开瓶器/12.jpeg",],
+    stock: "充足",
+    desc: `Legend Tribute Bottle Opener – First Release. This limited edition bottle opener gift box is inspired by the classic Argentina No. 10 jersey. It is specially crafted for true football fans. Salute the spirit of beautiful football and welcome the 2026 World Cup in the United States, Canada, and Mexico together.
+    The top adopts a high-end football shape. The cylindrical body is decorated with the legendary Argentina No. 10 jersey pattern. Made of durable zinc alloy, it has a premium texture. Long lasting and opens bottles smoothly. Comes with a custom cork. Unique registered design, a genuine collectible treasure.
+    This is the first ever collectible gift box of its kind. A must-have for football enthusiasts, collectors, and fans of the No. 10 Legend. Available now on TikTok Shop. Click to get yours. Disclaimer: This product is a tribute design. Not affiliated with any football association, team, or trademark.`,
+    warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
+  },
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
