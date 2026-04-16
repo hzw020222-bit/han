@@ -17,7 +17,7 @@ const products = [
 Applicable Age Group: 14 Years+
 Color: Golden, Silvery Grey
 Non-circulating currency`,
-    warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
+    warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
   },
   {
     id: 2,
