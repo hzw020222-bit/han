@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { use } from 'react';        // ← 新增这一行
 
 const products = [
   {
@@ -205,7 +206,7 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = React.use(params); // Next.js 15+ 需要这样写
+  const { id } = use(params); // Next.js 15+ 需要这样写
   const product = products.find(p => p.id === parseInt(id));
   const [currentImage, setCurrentImage] = useState(0);
 
