@@ -311,7 +311,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 全屏放大弹窗 - 严格限制大小 */}
+            {/* 全屏放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
