@@ -206,7 +206,7 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = React.use(params);
+  const { id } = use(params);
   const product = products.find(p => p.id === parseInt(id));
 
   const [currentImage, setCurrentImage] = useState(0);
