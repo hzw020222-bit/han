@@ -36,7 +36,7 @@ Non-circulating currency`,
     title: "Small Sling Bakpack Crossbody Bags for Women Chest Bag Cross Body Bag Fanny Pack for Outdoors Hiking Traveling,Crossbody Small Sling Backpack Sling Bag for Women Men,Mother's Day Gifts",
     price: 5.5,
     unit: "个",
-    images: ["/photo/TLP-JN8"],
+    images: ["/photo/腰包/1.jpeg"],
     stock: "充足",
     desc: `Stylish & Versatile Crossbody Design: This simple ladies chest bag combines fashion and function, offering a sleek design that works as a crossbody, shoulder bag, or sling pack, ideal for daily use, travel, shopping, and outdoor activities.
 Compact Yet Spacious Storage: With multiple compartments, this bag offers ample space for your essentials and keeps them organized and secure.
@@ -51,7 +51,7 @@ Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is
     title: "QS-3FSC-01 高端金属工艺壁灯 现代简约设计",
     price: 22.5,
     unit: "个",
-    images: ["/photo/你的灯图片"],
+    images: ["/photo/农舍三头灯/1.jpeg"],
     stock: "充足",
     desc: `QS-3FSC-01 高端金属工艺壁灯，现代简约设计，适合各种室内装饰。(标题和详情在tiktok或亚马逊上面拍照搜索同行的)`,
     warehouse: "美联达美西6号仓\n地址：4401 Eucalyptus Ave, Chino CA 91710\n联系人：Gary\n联系电话：9094090891 / 9297893222"
@@ -62,7 +62,7 @@ Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is
     title: "3PCS Good Luck horseshoe-shaped gifts, retro metal horseshoe-shaped with kraft paper labels, country horse shoes gifts, retro wedding party decorations, Kentucky Derby party decorations, Valentine's Day decorations",
     price: 8.4,
     unit: "包（3个）",
-    images: ["/photo/1"],
+    images: ["/photo/马蹄铁/1.jpg"],
     stock: "充足",
     desc: `Regarding this product:
 You will receive: There are a total of 3 horseshoe-shaped decorations in the package, approximately 7x6 cm /2.8x2.4 inches in size, with sufficient ropes, approximately 30 cm /11.8 inches in length, and the label size is approximately 9x4.5 cm /3.5x1.8 inches; A sufficient quantity can easily meet your decoration needs
@@ -77,7 +77,7 @@ Sturdy and reliable: Our horse shoe decorations are supported by high-quality me
     title: "Three-Piece Set wedding gift bottle openers mixed in 5 colors, retro skeleton key bottle openers, key bottle openers with guard tags, gift cards and key chains for guests' wedding gifts (one each in 5 colors)",
     price: 8.4,
     unit: "包（5把）",
-    images: ["/photo/TLP-JN8"],
+    images: ["/photo/圣经钥匙/1.jpeg"],
     stock: "充足",
     desc: `Regarding this commodity
 You will receive :5 hollowed-out bottle openers (one of each color) + 5 thank-you label cards + 5 key chains.
@@ -94,7 +94,7 @@ Perfect guarantee: If our bottle opener fails to meet your requirements, please 
     title: "Talking Cross Necklace, Openable Bible Pendant Metal Page, Christian Party Gift Jewelry, Religious Anniversary Engagement Birthday Gift 24 \"Gold-plated Amulet, Waterproof Hollowed-out Design, Daily Wear Can Change Family And Lover Photos",
     price: 10.8,
     unit: "个",
-    images: ["/photo/cross"],
+    images: ["/photo/圣经NFC项链/1.jpg"],
     stock: "充足",
     desc: `Cross Necklace - Openable Holy Bible Pendant
 A talking necklace
@@ -108,7 +108,7 @@ Bible Page Turning Pendant Necklace (waterproof) This unique pendant features a 
     title: "3PCS Christian Commemorative Coins",
     price: 8.4,
     unit: "包（3个）",
-    images: ["/photo/jyb"],
+    images: ["/photo/基督币/1.jpg"],
     stock: "充足",
     desc: `基督教主题纪念币，3个/包，适合宗教活动、收藏、送礼使用。`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
@@ -119,7 +119,7 @@ Bible Page Turning Pendant Necklace (waterproof) This unique pendant features a 
     title: "3PCS Lucky Collectible Coins - Vintage Charm Heads and Tails - Bikini Youth Challenge Alloy Decorations,AnniversarySuitable for Sports Fans Poker Markers Coasters Car and Room Decorations Festival Gifts Handicrafts Men's Gifts Fun Gifts (Not Legal Tender)",
     price: 8.4,
     unit: "包（3个）",
-    images: ["/photo/jyb"],
+    images: ["/photo/幸运币/1.jpg"],
     stock: "充足",
     desc: `DISCLAIMER: This product is intended solely for personal entertainment collection and decorative purposes. It is not a currency, financial instrument or investment product.
 "Batteries Included:No
@@ -136,7 +136,7 @@ Plating:No Precious Metal Plated`,
     title: "48pcs Pink And White Couple Adult Game Building Blocks, Fun Date Nights, Romantic Couples, Exciting Stacking Blocks, Romantic Anniversary Valentine's Day Gifts, Chatting And Flirting Challenge Spicy Games, Party Supplies, Birthday Gifts",
     price: 16.2,
     unit: "盒（48根）",
-    images: ["/photo/你的图片"],
+    images: ["/photo/积木/1.png"],
     stock: "充足",
     desc: `You will receive:
 Quantity: 48 pink and white building blocks and one lucky head and tail coin
@@ -155,7 +155,7 @@ Relationship Increase Gift: Using this gift can make the relationship between co
     title: "Wooden Date Night Decision Dice, Valentine's Day, portable,Romantic Couple Dice Set, Night, Funny date night ldeas couple Game Set, Party supplies Funny Gift for Valentine's DayAnniversary, Birthday (including 5 dice)",
     price: 8.4,
     unit: "套（5个筛子+棋盘）",
-    images: ["/photo/你的图片"],
+    images: ["/photo/筛子/1.jpeg"],
     stock: "充足",
     desc: `You will receive:You will receive:
 Gross Weight: 135g
@@ -174,7 +174,7 @@ Durable & Portable They are wear-resistant,  crackresistant and reusable. They c
     title: "Pop Up Birthday Card with Light & Sound Says Happy Birthday in Donald Trump REAL Voice for Men and Women, Mom & Dad, Husband or Wife",
     price: 12,
     unit: "个",
-    images: ["/photo/你的图片"],
+    images: ["/photo/特朗普贺卡/1.jpg"],
     stock: "充足",
     desc: `PATRIOTIC TALKING POP-UP BIRTHDAY CARD - Spark a lot of fun when someone opens this funny birthday card that LIGHTS UP! Suddenly HEAR President Donald Trump's booming voice wishing them a Happy Birthday!
 The pop-up birthday cake fills the room with warm, joyful light and sound. One of the best Donald Trump gifts for men and women. A perfect gift for your husband, wife, parents,
@@ -194,7 +194,7 @@ way to our state of the art light and audio technology. We know birthdays are sp
     title: "BesLowe 6 Packs 6 Inch 5CCT LED Recessed Ceiling Lights Ultra-Thin with Junction Box, 12W 150W Eqv, 3000K/3500K/4000K/5000K/6500K, 1200LM Dimmable Canless Downlights for Kitchen Hallway Dining Room",
     price: 25.2,
     unit: "6只",
-    images: ["/photo/你的图片"],
+    images: ["/photo/面板灯/1.jpeg"],
     stock: "充足",
     desc: `5 Color Temperatures in One & Dimmable: This LED recessed lighting offers 5 color temperature options: 3000K (soft white), 3500K (warm white), 4000K (neutral white), 5000K (daylight white), or 6500K (cool white). Simply slide the switch on the junction box to select your desired color before installation. It is compatible with most dimmers (dimmer not included), allowing dimming from 5% to 100%.
 Slim & Low-profile Design: Each light requires only 2 inches of clearance above the ceiling, making it suitable for various ceiling types and allowing installation around joists. The canless recessed lights create a clean ceiling appearance while enhancing the sense of space. Ideal for dining rooms, kitchens, living rooms, bedrooms, hallways, entryways, basements, offices, shopping malls, and other commercial areas.
@@ -225,7 +225,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
   return (
     <>
-      {/* Navbar */}
       <nav className="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -257,7 +256,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* 图片区 - 严格限制大小 */}
+          {/* 图片区 - 严格控制大小 */}
           <div>
             <div 
               className="relative max-w-[480px] max-h-[380px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
