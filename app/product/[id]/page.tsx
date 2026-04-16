@@ -202,7 +202,7 @@ Bright & Flicker-Free Performance: Equipped with a built-in LED chip, this 6-inc
 Safe & Durable Construction: Made with heat-dissipating materials and an integrated sealing design, these LED downlights are IC-rated and suitable for damp locations. The spring clip holds the fixture securely against the ceiling. The panel projects a 180-degree beam angle to help illuminate darker areas of your home.
 Easy to Install: The LED recessed light comes with clear instructions and all necessary mounting accessories. Installation involves three main steps: 1) Use the included round template to cut a 6.14-inch (155mm) hole in the ceiling. 2) Connect the wires. 3) Insert the light into the ceiling. You can install multiple recessed lights in under 30 minutes to update your home lighting.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
-  }
+  },
   {
     id: 14,
     name: "开瓶器",
