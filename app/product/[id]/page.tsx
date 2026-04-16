@@ -339,29 +339,27 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               )}
             </div>
 
-            {/* 缩略图列表 - 已优化滑动体验 */}
-{total > 1 && (
-  <div className="flex gap-3 mt-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
-    {product.images.map((img, index) => (
-      <button
-        key={index}
-        onClick={() => setCurrentImage(index)}
-        className={`flex-shrink-0 w-20 h-20 relative rounded-2xl overflow-hidden border-2 transition-all snap-center ${
-          currentImage === index
-            ? 'border-orange-600 scale-110 shadow-md'
-            : 'border-transparent hover:border-gray-300'
-        }`}
-      >
-        <Image
-          src={img}
-          alt={`产品图 ${index + 1}`}
-          fill
-          className="object-cover"
-        />
-      </button>
-    ))}
-  </div>
-)}
+            {/* 缩略图列表 */}
+            {total > 1 && (
+              <div className="flex gap-3 mt-6 overflow-x-auto pb-2 justify-center">
+                {product.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImage(index)}
+                    className={`flex-shrink-0 w-20 h-20 relative rounded-2xl overflow-hidden border-2 transition-all ${
+                      currentImage === index ? 'border-orange-600 scale-110' : 'border-transparent hover:border-gray-300'
+                    }`}
+                  >
+                    {/*
+                      ✅ 修复点：缩略图按钮加了 relative + 明确尺寸（w-20 h-20），
+                      Image fill 才有容器可填充，不会溢出
+                    */}
+                    <Image src={img} alt="" fill className="object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* ── 右侧信息 ── */}
           <div>
@@ -448,6 +446,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
-    
- 
+      </>
+    };
 }
