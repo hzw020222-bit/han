@@ -256,7 +256,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* 图片区 - 严格控制大小 */}
           <div>
             <div 
               className="relative max-w-[520px] max-h-[420px] mx-auto aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
@@ -308,7 +307,6 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 全屏放大弹窗 */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
