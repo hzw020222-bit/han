@@ -206,9 +206,11 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params); // Next.js 15+ 需要这样写
+  const { id } = React.use(params);
   const product = products.find(p => p.id === parseInt(id));
+
   const [currentImage, setCurrentImage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (!product) {
     return (
@@ -255,19 +257,22 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* 图片区 - 多图切换 */}
+          {/* 图片区 */}
           <div>
-            {/* 主图 */}
-            <div className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl">
+            {/* 主图 - 点击可放大 */}
+            <div 
+              className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
+              onClick={() => setIsModalOpen(true)}
+            >
               <Image 
                 src={product.images[currentImage]} 
                 alt={product.name} 
                 fill 
-                className="object-cover transition-all duration-300" 
+                className="object-contain transition-all duration-300 hover:scale-105" 
               />
             </div>
 
-            {/* 缩略图列表 */}
+            {/* 缩略图 */}
             {product.images.length > 1 && (
               <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
                 {product.images.map((img, index) => (
@@ -275,9 +280,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                     key={index}
                     onClick={() => setCurrentImage(index)}
                     className={`flex-shrink-0 w-20 h-20 rounded-2xl overflow-hidden border-2 transition-all ${
-                      currentImage === index 
-                        ? 'border-orange-600 scale-110' 
-                        : 'border-transparent hover:border-gray-300'
+                      currentImage === index ? 'border-orange-600 scale-110' : 'border-transparent hover:border-gray-300'
                     }`}
                   >
                     <Image src={img} alt="" fill className="object-cover" />
@@ -311,6 +314,52 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       </div>
+
+      {/* 放大弹窗 */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div className="relative max-w-5xl w-full mx-4" onClick={e => e.stopImmediatePropagation()}>
+            {/* 大图 */}
+            <div className="relative aspect-square max-h-[85vh] bg-white rounded-3xl overflow-hidden">
+              <Image 
+                src={product.images[currentImage]} 
+                alt={product.name} 
+                fill 
+                className="object-contain" 
+              />
+            </div>
+
+            {/* 关闭按钮 */}
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className="absolute -top-4 -right-4 bg-white text-gray-700 w-10 h-10 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-2xl"
+            >
+              ✕
+            </button>
+
+            {/* 左右切换按钮 */}
+            {product.images.length > 1 && (
+              <>
+                <button 
+                  onClick={() => setCurrentImage(prev => (prev - 1 + product.images.length) % product.images.length)}
+                  className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                >
+                  ←
+                </button>
+                <button 
+                  onClick={() => setCurrentImage(prev => (prev + 1) % product.images.length)}
+                  className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                >
+                  →
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 }
