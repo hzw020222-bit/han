@@ -256,23 +256,24 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
       <div className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/products" className="text-orange-600 hover:underline mb-8 inline-block">← 返回全部产品</Link>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* 图片区 */}
+       {/* 图片区 - 严格控制大小 + 点击放大 */}
           <div>
+            {/* 主图容器 - 限制最大高度 */}
             <div 
-              className="relative aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in"
+              className="relative w-full max-h-[480px] aspect-square rounded-3xl overflow-hidden bg-gray-100 shadow-xl cursor-zoom-in mx-auto"
               onClick={() => setIsModalOpen(true)}
             >
               <Image 
                 src={product.images[currentImage]} 
                 alt={product.name} 
                 fill 
-                className="object-contain transition-all duration-300 hover:scale-105" 
+                className="object-contain p-4 transition-all duration-300 hover:scale-105" 
               />
             </div>
 
+            {/* 缩略图 */}
             {product.images.length > 1 && (
-              <div className="flex gap-3 mt-6 overflow-x-auto pb-2">
+              <div className="flex gap-3 mt-6 overflow-x-auto pb-2 justify-center">
                 {product.images.map((img, index) => (
                   <button
                     key={index}
@@ -310,17 +311,17 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
         </div>
       </div>
 
-      {/* 全屏放大弹窗 */}
+      {/* 全屏放大弹窗 - 严格限制大小 */}
       {isModalOpen && (
         <div 
-          className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center"
+          className="fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center p-4"
           onClick={() => setIsModalOpen(false)}
         >
           <div 
-            className="relative max-w-5xl w-full mx-4"
+            className="relative max-w-[92vw] max-h-[85vh] w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative aspect-square max-h-[85vh] bg-white rounded-3xl overflow-hidden">
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl">
               <Image 
                 src={product.images[currentImage]} 
                 alt={product.name} 
@@ -329,24 +330,26 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               />
             </div>
 
+            {/* 关闭按钮 */}
             <button 
               onClick={() => setIsModalOpen(false)}
-              className="absolute -top-4 -right-4 bg-white text-gray-700 w-10 h-10 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-2xl"
+              className="absolute -top-4 -right-4 bg-white text-gray-700 w-11 h-11 rounded-2xl flex items-center justify-center shadow-xl hover:bg-gray-100 text-3xl"
             >
               ✕
             </button>
 
+            {/* 左右切换按钮 */}
             {product.images.length > 1 && (
               <>
                 <button 
                   onClick={() => setCurrentImage(prev => (prev - 1 + product.images.length) % product.images.length)}
-                  className="absolute left-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
                 >
                   ←
                 </button>
                 <button 
                   onClick={() => setCurrentImage(prev => (prev + 1) % product.images.length)}
-                  className="absolute right-6 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-xl text-3xl"
                 >
                   →
                 </button>
@@ -355,6 +358,3 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
           </div>
         </div>
       )}
-    </>
-  );
-}
