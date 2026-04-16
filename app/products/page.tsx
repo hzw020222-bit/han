@@ -9,7 +9,7 @@ export default function AllProducts() {
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
       price: 9.2,
       unit: "包（3个）",
-      images: ["/photo/特朗普币/1.jpg"],           // ← 必须是数组
+      images: ["/photo/特朗普币/2.jpg"],           // ← 必须是数组
       stock: "充足",
     },
     {
@@ -63,7 +63,7 @@ export default function AllProducts() {
       title: "Talking Cross Necklace, Openable Bible Pendant",
       price: 10.8,
       unit: "个",
-      images: ["/photo/圣经NFC钥匙/1.jpg"],
+      images: ["/photo/圣经NF项链/1.jpg"],
       stock: "充足",
     },
     {
