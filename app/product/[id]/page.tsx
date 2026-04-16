@@ -445,5 +445,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             )}
           </div>
         </div>
-      )} 
+      )}
+    </>
+  );
 }
