@@ -222,12 +222,25 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
     title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
     price: 10.8,
     unit: "包（5个）",
-    images: ["/photo/特朗普币/1.jpg","/photo/特朗普币/2.jpg","/photo/特朗普币/3.jpg","/photo/特朗普币/4.jpg","/photo/特朗普币/5.jpg","/photo/特朗普币/6.jpg","/photo/特朗普币/7.jpeg"],
+    images: ["/photo/250周年/1.jpg","/photo/250周年/2.jpg","/photo/250周年/3.jpg","/photo/250周年/4.jpg","/photo/250周年/5.jpg","/photo/250周年/6.jpg"],
     stock: "充足",
-    desc: `Whether Props Banknotes: Other Currency Prop Banknotes
-Applicable Age Group: 14 Years+
-Color: Golden, Silvery Grey
-Non-circulating currency`,
+    desc: `Headline: Celebrate 250 Years of American History (1776–2026)
+For a quarter-millennium, the spirit of independence has shaped a nation. Our 250th Anniversary American Heritage Coin Set is a premium tribute to this historic milestone—a timeless keepsake for every collector.
+Key Features:
+Exclusive 250th Anniversary Commemorative:
+Specially designed to honor the 1776–2026 journey. Each coin showcases iconic symbols of liberty, including the Liberty Bell, the Statue of Liberty, and the Majestic Bald Eagle, capturing 250 years of heritage in stunning detail.
+Standard 40mm Collector’s Size:
+Precision-engineered at 40mm (1.57 inches) in diameter. This ideal size ensures the intricate 3D relief is clearly visible while remaining perfect for coin albums, desktop display cases, or carrying as a lucky memento.
+Master-Level Craftsmanship:
+The durable surface is treated to resist tarnishing and scratches, ensuring your piece of history maintains its museum-quality luster for years to reach.
+Premium Gift-Ready Presentation:
+Each collector’s piece is housed in a crystal-clear protective acrylic capsule. It’s an ideal gift for history enthusiasts, veterans, or anyone proud of the American journey. Perfect for Independence Day, milestones, or as a unique addition to any private collection.
+Product Specifications:
+Theme: 250th Anniversary of American Independence (1776–2026)
+Diameter: 40mm
+Material: High-quality plated alloy with 3D relief
+Packaging: Protective transparent case included
+Note: This is a commemorative souvenir medal intended for collection and display purposes only. It is not legal tender or government-issued currency.`,
     warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
   },
 ];
