@@ -216,6 +216,20 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
     This is the first ever collectible gift box of its kind. A must-have for football enthusiasts, collectors, and fans of the No. 10 Legend. Available now on TikTok Shop. Click to get yours. Disclaimer: This product is a tribute design. Not affiliated with any football association, team, or trademark.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
   },
+  {
+    id: 15,
+    name: "250周年纪念币",
+    title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
+    price: 10.8,
+    unit: "包（5个）",
+    images: ["/photo/特朗普币/1.jpg","/photo/特朗普币/2.jpg","/photo/特朗普币/3.jpg","/photo/特朗普币/4.jpg","/photo/特朗普币/5.jpg","/photo/特朗普币/6.jpg","/photo/特朗普币/7.jpeg"],
+    stock: "充足",
+    desc: `Whether Props Banknotes: Other Currency Prop Banknotes
+Applicable Age Group: 14 Years+
+Color: Golden, Silvery Grey
+Non-circulating currency`,
+    warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
+  },
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
