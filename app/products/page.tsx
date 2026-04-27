@@ -129,6 +129,15 @@ export default function AllProducts() {
       images: ["/photo/开瓶器/1.jpg"],
       stock: "充足",
     },
+    {
+      id: 15,
+      name: "250周年纪念币",
+      title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence",
+      price: 10.8,
+      unit: "包（5个）",
+      images: ["/photo/250周年/1.jpg"],
+      stock: "充足",
+    },
   ];
 
   return (
