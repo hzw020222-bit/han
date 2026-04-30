@@ -215,7 +215,7 @@ Easy to Install: The LED recessed light comes with clear instructions and all ne
 The top adopts a high-end football shape. The cylindrical body is decorated with the No. 10 jersey pattern in green and white stripes. Made of durable zinc alloy, it has a premium texture. Long lasting and opens bottles smoothly. Comes with a custom cork. Unique design, a genuine collectible treasure.
 This is a must-have for football fans and collectors.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
-  }
+  },
   {
     id: 15,
     name: "250周年纪念币",
