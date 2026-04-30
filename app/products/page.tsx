@@ -135,7 +135,7 @@ export default function AllProducts() {
       title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence",
       price: 10.8,
       unit: "包（5个）",
-      images: ["/photo/250周年/1.jpg"],
+      images: ["/photo/250周年/8.jpg"],
       stock: "充足",
     },
   ];
