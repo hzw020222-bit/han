@@ -96,10 +96,9 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4">
             货盘展示站
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-             <br />
-            仅供展示
-          </p>
+          <p className="text-xl md:text-2xl text-red-500 font-bold max-w-2xl mx-auto">
+              标题和详情仅供参考
+            </p>
                     <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link 
               href="/products"
