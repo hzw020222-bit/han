@@ -222,7 +222,7 @@ This is a must-have for football fans and collectors.`,
     title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
     price: 10.8,
     unit: "包（5个）",
-    images: ["/photo/250周年/1.jpg","/photo/250周年/2.jpg","/photo/250周年/3.jpg","/photo/250周年/4.jpg","/photo/250周年/5.jpg","/photo/250周年/6.jpg"],
+    images: ["/photo/250周年/8.jpg","/photo/250周年/2.jpg","/photo/250周年/3.jpg","/photo/250周年/4.jpg","/photo/250周年/5.jpg","/photo/250周年/6.jpg","/photo/250周年/7.jpg"],
     stock: "充足",
     desc: `Headline: Celebrate 250 Years of American History (1776–2026)
 For a quarter-millennium, the spirit of independence has shaped a nation. Our 250th Anniversary American Heritage Coin Set is a premium tribute to this historic milestone—a timeless keepsake for every collector.
