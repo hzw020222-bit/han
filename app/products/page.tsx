@@ -123,7 +123,7 @@ export default function AllProducts() {
     {
       id: 14,
       name: "开瓶器",
-      title: "Messi #10 Jersey Wine Opener - Zinc Alloy Football Collector's Item",
+      title: "10 Jersey Wine Opener – Durable Zinc Alloy",
       price: 30,
       unit: "套",
       images: ["/photo/开瓶器/1.jpg"],
