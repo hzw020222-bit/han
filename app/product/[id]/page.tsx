@@ -230,12 +230,12 @@ The top adopts a high-end football shape. The cylindrical body is decorated with
 This is a must-have for football fans and collectors.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
   },
-  /*{
+  {
     id: 15,
-    name: "250周年纪念币",
+    name: "250周年纪念币(最低卖价29美金)",
     title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
     packageInfo: "包裹尺寸：15*13*3 cm / 包裹重量：150g",
-    price: 10.8,
+    price: 12,
     unit: "包（5个）",
     images: ["/photo/250周年/8.jpg","/photo/250周年/2.jpg","/photo/250周年/3.jpg","/photo/250周年/4.jpg","/photo/250周年/5.jpg","/photo/250周年/6.jpg","/photo/250周年/7.png","/photo/250周年/9.jpg","/photo/250周年/10.jpg"],
     stock: "充足",
@@ -257,7 +257,7 @@ Material: High-quality plated alloy with 3D relief
 Packaging: Protective transparent case included
 Note: This is a commemorative souvenir medal intended for collection and display purposes only. It is not legal tender or government-issued currency.`,
     warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
-  },*/
+  },
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
