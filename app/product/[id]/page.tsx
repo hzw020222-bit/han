@@ -7,7 +7,7 @@ import { use } from 'react';        // ← 新增这一行
 const products = [
   {
     id: 1,
-    name: "特朗普纪念币",
+    name: "特朗普纪念币(卖价不低于20美金)",
     title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design, Trump Memorial Coin Collector Christmas Holiday Gift with Protective Box（Non-circulating currency）",
     packageInfo: "包裹尺寸：15*13*3 cm / 包裹重量：100g",
     price: 9.2,
@@ -232,7 +232,7 @@ This is a must-have for football fans and collectors.`,
   },
   {
     id: 15,
-    name: "250周年纪念币(最低卖价29美金)",
+    name: "250周年纪念币(卖价不低于29美金)",
     title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
     packageInfo: "包裹尺寸：15*13*3 cm / 包裹重量：150g",
     price: 12,
