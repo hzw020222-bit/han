@@ -5,7 +5,7 @@ export default function AllProducts() {
     const products = [
     {
       id: 1,
-      name: "特朗普纪念币",
+      name: "特朗普纪念币(统一卖价在20以上)",
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
       price: 9.2,
       unit: "包（3个）",
