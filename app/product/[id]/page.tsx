@@ -256,7 +256,7 @@ Diameter: 40mm
 Material: High-quality plated alloy with 3D relief
 Packaging: Protective transparent case included
 Note: This is a commemorative souvenir medal intended for collection and display purposes only. It is not legal tender or government-issued currency.`,
-    warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
+    warehouse: "凌瀚美中休斯顿2仓\n地址：21331 Clay Road, katy, TX, 77449\n联系人：Linghan International\n联系电话：+1 6019887771"
   },
 ];
 
