@@ -21,7 +21,7 @@ export default function Home() {
       images: ["/photo/产品首图/首图2.jpg"],             // ← 改成数组
       stock: "充足",
     },
-    /.{
+    /*{
       id: 3,
       name: "腰包",
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
@@ -29,7 +29,7 @@ export default function Home() {
       unit: "个",
       images: ["/photo/产品首图/首图3.jpeg"],       // ← 改成数组
       stock: "充足",
-    },./
+    },*/
     {
       id: 4,
       name: "壁灯",
