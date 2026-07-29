@@ -32,7 +32,7 @@ Non-circulating currency`,
     desc: `QS-BPWL-G-02-NEW 高端金属工艺壁灯，现代简约设计，适合客厅、卧室、酒店装饰。(标题和详情在tiktok或亚马逊上面拍照搜索同行的)`,
     warehouse: "美东仓认证(Trmax)\n地址：1202A Airport Rd, North Brunswick Township, NJ 08902\n电话：6096137559\n收件人：Yan"
   },
-  {
+  /.{
     id: 3,
     name: "腰包",
     title: "Small Sling Bakpack Crossbody Bags for Women Chest Bag Cross Body Bag Fanny Pack for Outdoors Hiking Traveling,Crossbody Small Sling Backpack Sling Bag for Women Men,Mother's Day Gifts",
@@ -47,7 +47,7 @@ Premium Material & Durable Craftsmanship: Made from high-quality, water-resistan
 Comfortable & Adjustable Fit: The adjustable strap ensures a comfortable, customized fit, reducing shoulder strain for all-day wear.
 Perfect for Any Occasion & Great Gift Choice: Versatile and stylish, this bag is perfect for shopping, traveling, or errands, making it a great gift for women of all ages`,
     warehouse: "美东GA仓\n地址：1050 Northfield Ct, Ste 240, Roswell, GA 30076 USA\n电话：6784620469\n收件人：Ivan Zhang"
-  },
+  },./
   {
     id: 4,
     name: "农舍三头灯",
