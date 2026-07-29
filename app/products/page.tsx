@@ -21,7 +21,7 @@ export default function AllProducts() {
       images: ["/photo/金色壁灯/1.jpg"],
       stock: "充足",
     },
-    /.{
+    /*{
       id: 3,
       name: "腰包",
       title: "Small Sling Backpack Crossbody Bags for Women Chest Bag",
@@ -29,7 +29,7 @@ export default function AllProducts() {
       unit: "个",
       images: ["/photo/腰包/1.jpeg"],
       stock: "充足",
-    },./
+    },*/
     {
       id: 4,
       name: "农舍三头灯",
