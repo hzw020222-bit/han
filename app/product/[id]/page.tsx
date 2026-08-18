@@ -109,7 +109,7 @@ Upon receiving the goods, we will send you a photo that has been pasted. You can
 Bible Page Turning Pendant Necklace (waterproof) This unique pendant features a Jesus portrait, embodying love and peace. It's a devout pendant, perfect for Christian jewelry enthusiasts. The hollow cross design adds a touch of religious fashion. Ideal for anniversaries, engagements, birthdays, or as a car hanging ornament. Enhance your prayer time with this meaningful piece.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
   },
-  {
+  /*{
     id: 8,
     name: "基督教纪念币",
     title: "3PCS Christian Commemorative Coins",
@@ -120,7 +120,7 @@ Bible Page Turning Pendant Necklace (waterproof) This unique pendant features a 
     stock: "充足",
     desc: `基督教主题纪念币，3个/包，适合宗教活动、收藏、送礼使用。`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
-  },
+  },*/
   {
     id: 9,
     name: "幸运头尾硬币",
