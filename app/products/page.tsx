@@ -66,7 +66,7 @@ export default function AllProducts() {
       images: ["/photo/圣经NFC项链/1.jpg"],
       stock: "充足",
     },
-    {
+    /*{
       id: 8,
       name: "基督教纪念币",
       title: "3PCS Christian Commemorative Coins",
@@ -74,7 +74,7 @@ export default function AllProducts() {
       unit: "包（3个）",
       images: ["/photo/基督币/2.jpg"],
       stock: "充足",
-    },
+    },*/
     {
       id: 9,
       name: "幸运头尾硬币",
