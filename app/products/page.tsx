@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AllProducts() {
     const products = [
-    {
+    /*{
       id: 1,
       name: "特朗普纪念币(统一卖价在20以上)",
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
@@ -11,7 +11,7 @@ export default function AllProducts() {
       unit: "包（3个）",
       images: ["/photo/特朗普币/2.jpg"],           // ← 必须是数组
       stock: "充足",
-    },
+    },*/
     {
       id: 2,
       name: "金色壁灯",
@@ -129,7 +129,7 @@ export default function AllProducts() {
       images: ["/photo/开瓶器/1.jpg"],
       stock: "充足",
     },
-    {
+    /*{
       id: 15,
       name: "250周年纪念币(统一卖价在29以上)",
       title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence",
@@ -137,7 +137,7 @@ export default function AllProducts() {
       unit: "包（5个）",
       images: ["/photo/250周年/8.jpg"],
       stock: "充足",
-    },
+    },*/
   ];
 
   return (
