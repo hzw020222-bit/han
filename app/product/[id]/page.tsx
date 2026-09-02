@@ -5,7 +5,7 @@ import { useState, useRef } from 'react';
 import { use } from 'react';        // ← 新增这一行
 
 const products = [
-  {
+  /*{
     id: 1,
     name: "特朗普纪念币(卖价不低于20美金)",
     title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design, Trump Memorial Coin Collector Christmas Holiday Gift with Protective Box（Non-circulating currency）",
@@ -19,7 +19,7 @@ Applicable Age Group: 14 Years+
 Color: Golden, Silvery Grey
 Non-circulating currency`,
     warehouse: "美中3海外仓\n地址：1000 W Grand Pkwy S, Unit A046, katy, TX, 77494\n联系人：Darren\n联系电话：+1 6892004602"
-  },
+  },*/
   {
     id: 2,
     name: "金色壁灯",
@@ -230,7 +230,7 @@ The top adopts a high-end football shape. The cylindrical body is decorated with
 This is a must-have for football fans and collectors.`,
     warehouse: "美国CA2号仓\n地址：13200 Loop Road, Fontana, CA, 92337\n联系人：黎广才\n联系电话：+1 9378600010"
   },
-  {
+  /*{
     id: 15,
     name: "250周年纪念币(卖价不低于29美金)",
     title: "5PCS 250th US Anniversary Commemorative Coin Set - Honor 250 Years of American Independence, 1776-2026 Limited Edition Historical Collectible Gift",
@@ -257,7 +257,7 @@ Material: High-quality plated alloy with 3D relief
 Packaging: Protective transparent case included
 Note: This is a commemorative souvenir medal intended for collection and display purposes only. It is not legal tender or government-issued currency.`,
     warehouse: "凌瀚美中休斯顿2仓\n地址：21331 Clay Road, katy, TX, 77449\n联系人：Linghan International\n联系电话：+1 6019887771"
-  },
+  },*/
 ];
 
 export default function ProductDetail({ params }: { params: Promise<{ id: string }> }) {
