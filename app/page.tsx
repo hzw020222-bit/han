@@ -3,7 +3,7 @@ import ProductCard from '../components/ProductCard';
 
 export default function Home() {
       const products = [
-    {
+    /*{
       id: 1,
       name: "特朗普纪念币(统一卖价在20以上)",
       title: "3PCS Trump 47th President Three Collectible Coins, Patriotic Design",
@@ -11,7 +11,7 @@ export default function Home() {
       unit: "包（3个）",
       images: ["/photo/产品首图/首图1.jpg"],           // ← 改成数组，即使只有一张也用 []
       stock: "充足",
-    },
+    },*/
     {
       id: 2,
       name: "金色壁灯",
